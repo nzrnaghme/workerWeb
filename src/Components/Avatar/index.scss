@@ -1,0 +1,91 @@
+@use "sass:math";
+@import "../../global";
+
+$lg-avatar: 8rem;
+$sm-avatar: 3rem;
+
+$fab-size: 2.6rem;
+
+.lg-avatar {
+  width: $lg-avatar !important;
+  height: $lg-avatar !important;
+}
+
+.sm-avatar {
+  width: $sm-avatar !important;
+  height: $sm-avatar !important;
+}
+
+.check-support {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  .title-check-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    color: white;
+    font-size: 14px;
+    transform: rotate(-45deg) !important;
+    background-color: #ff5d00;
+    margin-top: 40%;
+  }
+  .title-check-support-reject{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    color: white;
+    font-size: 14px;
+    transform: rotate(-45deg) !important;
+    background-color: #ff0000;
+    margin-top: 40%;
+  }
+}
+
+.editable-avatar-wrapper {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+
+  .fab {
+    @include circle-maker(
+      $size: $fab-size,
+      $bordered: true,
+      $width: $fab-size * 0.1,
+      $color: white
+    );
+    position: absolute;
+    color: white;
+  }
+
+  .delete-fab {
+    z-index: 2;
+    @extend .fab;
+
+    right: math.div(-1 * $fab-size, 2);
+    top: calc(50% - math.div($fab-size, 2));
+    background: $danger;
+  }
+
+  .edit-fab {
+    @extend .fab;
+    z-index: 2;
+    top: calc(50% - math.div($fab-size, 2));
+    right: calc(50% - math.div($fab-size, 2));
+    transform: rotate(45deg) translateX(math.div($lg-avatar, 2));
+    background: $success;
+
+    #pen-icon {
+      transform: rotate(-45deg);
+    }
+  }
+}

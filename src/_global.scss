@@ -1,0 +1,144 @@
+// Font colors
+$primary: #444343;
+$secondary: #969696;
+$pale-gray: #eff0f2;
+
+// Font sizes
+$xxxlg: 1.5rem;
+$xxlg: 1.2rem;
+$xlg: 1.1rem;
+$lg: 1rem;
+$md: 0.9rem;
+$sm: 0.8rem;
+$xs: 0.75rem;
+$xxs: 0.7rem;
+$xxxs: 0.6rem;
+
+$brand-color: #00707e;
+$neutral: #00707e;
+// $neutral: #1976d2;
+$success: #02a923;
+$warning: #ff9800;
+$danger: #ff0000;
+
+@mixin flex-container(
+  $dir: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $wrap: nowrap,
+  $fully-centered: false
+) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+
+  @if $fully-centered {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin grid-container($gap: 1rem, $inPopup: false) {
+  display: grid;
+  gap: $gap; // The gap shorthand is: row column
+}
+
+@mixin grid-template($gap: 1rem, $cols: null, $rows: null) {
+  display: grid;
+  gap: $gap;
+
+  grid-template-rows: $rows;
+  grid-template-columns: $cols;
+}
+
+@mixin circle-maker(
+  $size,
+  $bg: transparent,
+  $bordered: false,
+  $color: black,
+  $width: 1px,
+  $style: solid
+) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+
+  @if $bg {
+    background: $bg;
+  }
+
+  @if $bordered {
+    border: $width $style $color;
+  }
+}
+
+@mixin border-maker($width: 1px, $color: black, $radius: 4px) {
+  border: $width solid $color;
+  border-radius: $radius;
+}
+
+@mixin no-spinner-number-input() {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@mixin hide-scrollbars() {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  & {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@mixin placeholder($color: $primary, $opacity: 1) {
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color;
+    opacity: $opacity; /* Firefox */
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $color;
+  }
+}
+
+// TODO: Sizes should follow an allied standard.
+@mixin main-text-size() {
+  font-size: $lg;
+
+  @media (max-width: 60rem) {
+    font-size: $md;
+  }
+
+  @media (max-width: 40rem) {
+    font-size: $sm;
+  }
+}
+
+@mixin disable-user-select() {
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -o-user-select: none !important;
+  user-select: none !important;
+}

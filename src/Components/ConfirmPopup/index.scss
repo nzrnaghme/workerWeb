@@ -1,0 +1,57 @@
+@import "../../global";
+
+.confirm-popup {
+  .MuiDialog-paper {
+    width: fit-content !important;
+  }
+
+  p {
+    text-align: justify !important;
+    white-space: unset; //For Firefox
+  }
+
+  .confirm-popup-title {
+    color: $primary;
+    font-size: $xlg;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+
+    @media (max-width: 40rem) {
+      font-size: $md;
+    }
+  }
+
+  .confirm-popup-content {
+    color: $secondary;
+    font-size: $md;
+
+    // @media (max-width: 40rem) {
+    //   font-size: $sm;
+    // }
+  }
+
+  //TODO: Code repetition, Popup Btns Wrapper.
+  .confirm-popup-btns-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+
+    .confirm-popup-back-btn {
+      margin-right: 1rem;
+    }
+
+    @media (max-width: 40rem) {
+      @include grid-template($cols: repeat(2, 1fr));
+      margin-top: 1rem;
+
+      .xs-btn {
+        width: 100%;
+        height: 2.5rem; //Avoid code duplication.
+      }
+
+      .confirm-popup-back-btn {
+        margin-right: 0;
+      }
+    }
+  }
+}

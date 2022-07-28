@@ -1,0 +1,64 @@
+@import "../../../global";
+
+.notification {
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  color: $secondary;
+
+  @media (max-width: 40rem) {
+    gap: 0.5rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .notification-date-wrapper {
+    span {
+      margin: 0;
+      font-size: $sm;
+      text-align: justify !important;
+      white-space: unset; //For Firefox
+      font-size: $xs;
+
+      @media (max-width: 40rem) {
+        font-size: $xxs;
+      }
+
+      &:first-of-type {
+        font-weight: bold;
+      }
+
+      &:last-of-type {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+
+  .notification-caption-btn-wrapper {
+    @include flex-container($justify: space-between);
+
+    .notification-caption {
+      font-size: $md;
+
+      @media (max-width: 40rem) {
+        font-size: $sm;
+      }
+    }
+
+    button {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.notification-popup-btn-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+
+  @media (max-width: 40rem) {
+    margin-top: 1rem;
+  }
+}

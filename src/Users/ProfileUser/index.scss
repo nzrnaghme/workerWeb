@@ -1,0 +1,32 @@
+@import "../../global";
+
+// Code Repetition Warning: It's just alike with the request detail form.
+.profile-paper {
+  margin-bottom: 1rem;
+  padding: 2rem; //TODO:This should later become an uniform standard on papers.
+
+  @media (max-width: 40rem) {
+    padding: 1rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .profile-paper-title {
+    font-size: $xxlg;
+    color: $primary;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .profile-paper-btn-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+    button {
+      @media (max-width: 40rem) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import "../../global";
+
+.MuiDialog-paperFullScreen {
+  width: 100% !important;
+  border-radius: 0 !important;
+  &.MuiDialog-paper {
+    .MuiToolbar-regular {
+      // min-height: 3.5rem;
+    }
+
+    .fullscreen-menu-bar {
+      min-width: 280px;
+      height: 4rem;
+      background-color: white;
+      .MuiTypography-root {
+        margin-right: 0.5rem;
+      }
+      .MuiButton-root {
+        min-width: 3rem !important;
+        font-weight: bolder;
+      }
+    }
+    .fullscreen-menu-bar-pc {
+      width: 20%;
+      height: 4rem;
+      min-width: 300px;
+      background-color: white;
+      .MuiTypography-root {
+        margin-right: 0.5rem;
+      }
+      .MuiButton-root {
+        min-width: 3rem !important;
+        font-weight: bolder;
+      }
+    }
+
+    .form-menu-Bar {
+      margin-top: -4%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .paper-menu-bar {
+        height: 100%;
+        padding: 0px !important;
+        margin-top: 1rem;
+        .user-menu-Bar {
+          cursor: pointer;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          .title-profile {
+            word-break: break-word;
+            width: 70%;
+            margin-right: 3%;
+          }
+          .icon-user-menu-Bar {
+            margin-right: 1rem;
+            width: 175%;
+            display: flex;
+            flex-direction: row;
+            p {
+              font-weight: normal;
+            }
+            .img-tick-request {
+              margin-left: 3% !important;
+              width: 8% !important;
+            }
+            .img-withOut-tick-request {
+              margin-left: 3% !important;
+              width: 7% !important;
+            }
+            .img-withOut-tick {
+              width: 7.5% !important;
+              margin-left: 3% !important;
+            }
+            .img-tick {
+              margin-left: 3% !important;
+              width: 9% !important;
+            }
+            .img-withOut-tick-servant {
+              width: 9% !important;
+              margin-left: 3% !important;
+            }
+            .img-withOut-tick-wallet {
+              width: 8.1% !important;
+              margin-left: 3% !important;
+            }
+          }
+          .icon-move-user-menu-Bar {
+            width: 23%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

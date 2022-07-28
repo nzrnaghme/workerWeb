@@ -1,0 +1,10 @@
+<svg id="_4781824_alarm_alert_attention_bell_clock_icon" data-name="4781824_alarm_alert_attention_bell_clock_icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Layer_2" data-name="Layer 2" transform="translate(3.038 2.279)">
+    <path id="Path_456" data-name="Path 456" d="M15.038,27.8A3.038,3.038,0,0,1,12,24.76a.76.76,0,0,1,.76-.76h4.558a.76.76,0,0,1,.76.76A3.038,3.038,0,0,1,15.038,27.8Zm-1.314-2.279a1.519,1.519,0,0,0,2.628,0Z" transform="translate(-5.923 -8.049)" fill="#ff2020"/>
+    <path id="Path_457" data-name="Path 457" d="M16.8,6.038H13.76a.76.76,0,0,1-.76-.76,2.279,2.279,0,1,1,4.558,0A.76.76,0,0,1,16.8,6.038ZM15.279,4.519Z" transform="translate(-6.164 -3)" fill="#ff2020"/>
+    <path id="Path_458" data-name="Path 458" d="M21.471,20.951H4.76a.76.76,0,0,1-.76-.76,5.317,5.317,0,0,1,2.279-4.368V11.836A6.836,6.836,0,0,1,13.07,5h.083a6.836,6.836,0,0,1,6.836,6.836v3.988a5.317,5.317,0,0,1,2.241,4.368h0A.76.76,0,0,1,21.471,20.951ZM5.6,19.432h15.04A3.8,3.8,0,0,0,18.812,16.9a.76.76,0,0,1-.38-.661V11.836a5.317,5.317,0,1,0-10.634,0v4.406a.76.76,0,0,1-.38.661A3.8,3.8,0,0,0,5.6,19.432Z" transform="translate(-4 -3.481)" fill="#ff2020"/>
+  </g>
+  <g id="frame">
+    <rect id="Rectangle_370" data-name="Rectangle 370" width="25" height="25" fill="none"/>
+  </g>
+</svg>

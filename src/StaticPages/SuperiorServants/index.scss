@@ -1,0 +1,18 @@
+@import "../../global";
+
+.superior-servants {
+  margin-bottom: 2rem;
+
+  //TODO: Check if repetition is avoidable!...
+  .statics-title {
+    margin: {
+      top: 2rem;
+      bottom: 0.5rem;
+    }
+  }
+
+  .superior-servants-items-wrapper {
+    @include grid-template($cols: repeat(5, 1fr));
+    margin-top: 3rem;
+  }
+}

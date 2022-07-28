@@ -1,0 +1,14 @@
+@import "../../../../global";
+
+.skills-multiselect {
+  margin-bottom: 1rem;
+}
+
+.skills-about-hint {
+  margin: {
+    top: 3px; // Like Mui's standard
+    bottom: 0;
+  }
+  color: $secondary;
+  font-size: $xs;
+}

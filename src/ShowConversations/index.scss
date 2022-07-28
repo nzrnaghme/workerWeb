@@ -1,0 +1,79 @@
+@import "../global";
+
+.show-conversations-popup {
+  .MuiDialog-paper {
+    height: 30rem;
+
+    @media (max-width: 40rem) {
+      height: 25rem;
+    }
+
+    .MuiDialogContent-root {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .show-conversations-header {
+      @include flex-container($align: center, $justify: flex-start);
+      width: 100%;
+
+      .sm-avatar {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+
+        @media (max-width: 40rem) {
+          width: 2rem !important;
+          height: 2rem !important;
+        }
+      }
+
+      .show-conversations-header-divider {
+        margin-right: 0.5rem;
+        height: 2rem;
+
+        @media (max-width: 40rem) {
+          height: 1.5rem !important;
+        }
+      }
+
+      .show-conversations-header-username {
+        margin: 0;
+        margin-right: 0.5rem;
+        font-size: $md;
+        color: $primary;
+
+        @media (max-width: 40rem) {
+          font-size: $xs;
+        }
+      }
+    }
+  }
+
+  .show-conversations-main-divider {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .chat-display {
+    margin-bottom: 0;
+  }
+
+  .show-conversations-btn-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+
+    @media (max-width: 40rem) {
+      margin-top: 1rem;
+    }
+    button {
+      @media (max-width: 40rem) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.paper-commands-popup {
+  border: 1px solid lightgray;
+  width: 90%;
+}

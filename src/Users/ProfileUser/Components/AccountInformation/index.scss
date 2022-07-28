@@ -1,0 +1,24 @@
+@import "../../../../global";
+
+.credit-card-wrapper {
+  @include grid-template(
+    $gap: 0.5rem,
+    $cols: 1fr 40px
+  ); // 40px is Mui field's height.
+  margin: 1rem 0;
+
+  .c-c-bank-icon-wrapper {
+    padding: 0.25rem;
+    box-sizing: border-box;
+    height: 40px; // 40px is Mui field's height.
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 0.25rem;
+    @include flex-container($fully-centered: true);
+    font-size: $xxlg;
+    color: $secondary;
+
+    img {
+      height: 100%;
+    }
+  }
+}

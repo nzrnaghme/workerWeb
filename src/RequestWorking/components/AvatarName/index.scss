@@ -1,0 +1,71 @@
+@import "../../../global";
+
+// TODO: Could be moved to global. Repeated twice.
+@mixin main-text-size() {
+  font-size: $lg; // Just like name in the header of this component.
+
+  @media (max-width: 60rem) {
+    font-size: $md;
+  }
+
+  @media (max-width: 40rem) {
+    font-size: $sm;
+  }
+}
+
+.avatar-name-wrapper {
+  @include flex-container($align: center);
+
+  &.avatar-name-wrapper-lg {
+    flex-direction: column;
+    margin-top: 0; //In the Working is different from The W8ing.
+  }
+
+  .avatar-btn {
+    border-radius: 50%;
+
+    @media (max-width: 40rem) {
+      .sm-avatar {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+      }
+    }
+  }
+
+  .name-mobile-wrapper {
+    margin-right: 0.5rem; //TODO
+    @include flex-container($dir: column, $align: center);
+
+    &.name-mobile-wrapper-lg {
+      margin: {
+        right: 0;
+        top: 0.5rem;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: $secondary;
+    }
+
+    .name {
+      @include main-text-size();
+    }
+
+    .name-mobile-divider {
+      width: 100%;
+
+      &.name-mobile-divider-lg {
+        margin: 0.25rem 0;
+      }
+    }
+
+    .mobile {
+      font-size: $md;
+
+      @media (max-width: 40rem) {
+        font-size: $xs;
+      }
+    }
+  }
+}

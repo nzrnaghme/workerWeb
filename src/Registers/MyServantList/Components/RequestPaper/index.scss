@@ -1,0 +1,111 @@
+@import "../../../../global";
+
+.myservices-req-paper {
+  @include flex-container($dir: column);
+  min-height: 10rem;
+  height: fit-content;
+  flex-grow: 1;
+  margin: 0 !important;
+  color: $secondary !important;
+  padding: 0.5rem !important;
+  //   padding-top: 0.25rem !important;
+
+  .myservices-req-paper-header {
+    @include grid-template($gap: 0.25rem, $rows: repeat(2, auto));
+    width: 100%;
+    margin-bottom: 0.25rem;
+
+    .myservices-req-paper-header-items-wrapper {
+      @include flex-container($align: center, $justify: flex-end);
+
+      .req-paper-header-item {
+        // margin-right: 0 !important;
+
+        .req-paper-date-time {
+          .datetime-dash-seperator {
+            margin: 0 0.2rem;
+          }
+        }
+      }
+
+      .myservices-req-paper-emergent-icon {
+        color: $danger !important;
+      }
+    }
+  }
+
+  .myservices-req-paper-main-divider {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .myservices-req-paper-main {
+    @include flex-container($dir: column);
+    width: 100%;
+    flex-grow: 1;
+
+    .myservices-req-paper-title-more {
+      @include flex-container($align: flex-start, $justify: space-between);
+      width: 100%;
+
+      .myservices-req-paper-title {
+        margin: 0;
+        font-size: $md;
+        font-weight: bold;
+
+        .myservices-req-paper-title-servant {
+          color: $secondary;
+          margin-right: 0.25rem;
+          font-weight: 400;
+        }
+      }
+
+      .myservices-req-paper-title-normal {
+        @extend .myservices-req-paper-title;
+        color: $primary;
+      }
+
+      .myservices-req-paper-title-emergancy {
+        @extend .myservices-req-paper-title;
+        color: $danger;
+      }
+
+      .myservices-req-paper-more-details {
+        font-size: $xxlg;
+        margin: 0 0.25rem;
+
+        &:hover {
+          cursor: pointer;
+          color: $brand-color;
+
+          @media (max-width: 60rem) {
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    .myservices-req-paper-details {
+      width: 100%;
+      margin: 0.25rem 0;
+      margin-bottom: 1rem;
+      color: $secondary;
+      font-size: $sm;
+
+      .myservices-req-paper-details-item {
+        @include flex-container($justify: space-between);
+        margin: 0.25rem 0;
+      }
+    }
+
+    .myservices-req-paper-footer-btns-wrapper {
+      @include flex-container($align: center, $justify: flex-end);
+      width: 100%;
+      margin-top: auto;
+
+      button {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}

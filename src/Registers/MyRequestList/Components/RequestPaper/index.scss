@@ -1,0 +1,133 @@
+@import "../../../../global";
+
+.show-reject-request-popup {
+  .show-reject-request-header {
+    font-size: $lg;
+    color: $primary;
+
+    @media (max-width: 40rem) {
+      font-size: $md;
+    }
+  }
+
+  .show-reject-request-main-divider {
+    width: 100%;
+    margin: {
+      top: 0.25rem;
+      bottom: 1rem;
+    }
+  }
+
+  .description-reject-display {
+    textarea {
+      text-align: justify !important;
+      white-space: unset; //For Firefox
+    }
+  }
+
+  .show-reject-request-btn-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+
+    @media (max-width: 40rem) {
+      margin-top: 1rem;
+    }
+      button {
+      @media (max-width: 40rem) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.myreqs-req-paper {
+  @include flex-container($dir: column);
+  height: 12rem;
+  flex-grow: 1;
+  margin: 0 !important;
+  color: $secondary !important;
+  padding: 0.5rem !important;
+  //   padding-top: 0.25rem !important;
+
+  .myreqs-req-paper-header {
+    @include grid-template($gap: 0.25rem, $rows: repeat(2, auto));
+    margin-bottom: 0.25rem;
+    width: 100%;
+
+    .myreqs-req-paper-status-eye-wrapper {
+      @include flex-container($align: center, $justify: space-between);
+
+      //   .req-paper-header-item {
+      //     margin-right: 0 !important;
+
+      // .req-paper-date-time {
+      // @include flex-container($justify: space-around);
+      // width: 5.5rem;
+      // }
+      //   }
+    }
+
+    .myreqs-req-paper-header-items-wrapper {
+      @include flex-container($align: center, $justify: flex-end);
+
+      .req-paper-header-item {
+        // margin-right: 0 !important;
+
+        .req-paper-date-time {
+          // @include flex-container($justify: space-around);
+          // width: 5.5rem;
+          .datetime-dash-seperator {
+            margin: 0 0.2rem;
+          }
+        }
+      }
+      .myreqs-req-paper-emergent-icon {
+        color: $danger !important;
+      }
+    }
+  }
+
+  .myreqs-req-paper-main-divider {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .myreqs-req-paper-main {
+    @include flex-container($dir: column);
+    width: 100%;
+    flex-grow: 1;
+
+    .myreqs-req-paper-title {
+      margin: 0;
+      font-size: $md;
+      font-weight: bold;
+    }
+
+    .myreqs-req-paper-title-normal {
+      @extend .myreqs-req-paper-title;
+      color: $primary;
+    }
+
+    .myreqs-req-paper-title-emergancy {
+      @extend .myreqs-req-paper-title;
+      color: $danger;
+    }
+
+    .myreqs-req-paper-description {
+      margin: 0.25rem 0;
+      color: $secondary;
+      font-size: $sm;
+      word-break: break-word;
+    }
+
+    .myreqs-req-paper-footer-btns-wrapper {
+      @include flex-container($align: center, $justify: flex-end);
+      width: 100%;
+      margin-top: auto;
+
+      button {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}

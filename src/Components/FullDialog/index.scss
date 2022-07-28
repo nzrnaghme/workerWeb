@@ -1,0 +1,28 @@
+@import "../../global";
+
+.MuiDialog-paperFullScreen {
+  width: 100% !important;
+  border-radius: 0 !important;
+
+  &.MuiDialog-paper {
+    padding-top: 5rem;
+    background-color: lighten($pale-gray, 4%);
+
+    .MuiToolbar-regular {
+      min-height: 4rem;
+    }
+
+    .fullscreen-dialog-appbar {
+      height: 4rem;
+      background-color: $brand-color;
+
+      .MuiTypography-root {
+        margin-right: 0.5rem;
+      }
+
+      .MuiButton-root {
+        min-width: 3rem !important;
+      }
+    }
+  }
+}

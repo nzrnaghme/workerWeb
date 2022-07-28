@@ -1,0 +1,118 @@
+@import "../../global";
+
+.filters-container {
+  width: 100%;
+  margin-left: 1rem;
+
+  .filters-paper-title {
+    @include flex-container($dir: row);
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .filters-paper {
+    @include flex-container($dir: column);
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .filters-paper-header {
+      @include flex-container($dir: column);
+      width: 100%;
+
+      .filters-paper-header-title {
+        margin: 0;
+        margin-right: 0.25rem;
+        flex-grow: 1;
+        font-size: $md;
+        color: $secondary;
+      }
+
+      .filters-paper-chips-wrapper {
+        @include flex-container($wrap: wrap);
+        width: 100%;
+        box-sizing: border-box;
+        .MuiChip-root {
+          margin: 0.25rem 0 0 0.15rem;
+        }
+      }
+    }
+
+    .filters-paper-divider {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .filters-paper-body {
+      @include hide-scrollbars();
+      overflow: auto;
+      min-height: 3rem;
+      flex-grow: 1;
+      width: 100%;
+      box-sizing: border-box;
+
+      .simplebar-scrollbar::before {
+        background: $secondary;
+        width: 35%;
+      }
+
+      .simplebar-wrapper {
+        max-height: 0; // Fixes extra scrolling.
+
+        .simplebar-content {
+          padding-right: 1.25rem !important;
+          @include flex-container($dir: column);
+        }
+      }
+    }
+
+    .filter-paper-long-body {
+      min-height: 6rem !important;
+      .MuiFormControlLabel-root {
+        margin-top: 3px;
+      }
+    }
+    .filter-paper-body-location {
+      min-height: 9rem !important;
+      .MuiFormControlLabel-root {
+        margin-top: 3px;
+      }
+    }
+
+    // CheckBoxes' styles
+    .MuiButtonBase-root {
+      padding: 0.1rem;
+    }
+
+    .MuiFormControlLabel-label {
+      font: inherit;
+      color: $secondary;
+      font-size: $sm;
+    }
+
+    // BtnGroup's styles
+    .filters-location-btn-group {
+      @include border-maker($color: $secondary);
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      box-sizing: border-box;
+
+      button {
+        color: $secondary;
+        flex-grow: 1;
+      }
+
+      .activeBtn {
+        background: $neutral;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../global";
+
+.upsert-dates-back-btn {
+  margin-right: 1rem !important;
+
+  @media (max-width: 40rem) {
+    margin-right: 0 !important;
+  }
+}

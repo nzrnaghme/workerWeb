@@ -1,0 +1,64 @@
+@import "../../../../global";
+
+.more-info-location-fields-grid-wrapper {
+  @include grid-container();
+  margin-bottom: 1rem;
+  grid-template-areas:
+    "item1 item1"
+    "item2 item3";
+
+  @media (max-width: 40rem) {
+    grid-template-areas:
+      "item1 item1"
+      "item2 item2"
+      "item3 item3";
+  }
+
+  .more-info-location-fields-grid-item1 {
+    grid-area: item1;
+  }
+
+  .more-info-location-fields-grid-item2 {
+    grid-area: item2;
+  }
+
+  .more-info-location-fields-grid-item3 {
+    grid-area: item3;
+  }
+}
+
+.more-info-email-disability-wrapper {
+  @include grid-template($cols: 1fr 1fr);
+  margin: 1rem 0;
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.address-more {
+  display: flex;
+
+  label {
+    color: #00707e;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer !important;
+  }
+  .icon-address-more {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #00707e;
+    border-radius: 50%;
+    text-align: right;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer !important;
+    svg {
+      margin-right: 32%;
+      margin-top: 28%;
+    }
+  }
+}

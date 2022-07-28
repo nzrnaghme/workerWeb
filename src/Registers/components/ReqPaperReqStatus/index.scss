@@ -1,0 +1,18 @@
+@import "../../../global";
+
+.req-paper-status {
+  @include flex-container($align: center);
+
+  .req-paper-status-icon-wrapper {
+    @include circle-maker($size: 1.7rem, $bg: $neutral);
+    @include flex-container($fully-centered: true);
+    font-size: $xxs;
+    color: white !important;
+    margin-left: 0.25rem;
+  }
+
+  .req-paper-status-title {
+    font-size: $xxs;
+    margin: 0;
+  }
+}

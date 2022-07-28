@@ -1,0 +1,34 @@
+@import "../../global";
+
+.MuiDialog-paper {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  direction: rtl;
+
+  width: 30rem; //TODO
+  min-width: 18rem;
+
+  .popup-title {
+    color: $secondary;
+    text-align: center;
+    font-size: $lg;
+    margin: 0;
+    margin-bottom: 1rem;
+
+    @media (max-width: 40rem) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .MuiDialogContent-root {
+    // @include flex-container($dir: column, $align: center);
+    padding: 0;
+    box-sizing: border-box;
+
+    &:first-child {
+      padding-top: 0 !important; // Extra styling by Mui itself that should've been corrected.
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../global";
+
+.suggestions {
+  margin-bottom: 2rem;
+
+  .statics-title {
+    margin: {
+      top: 2rem;
+      bottom: 0.5rem;
+    }
+  }
+
+  .contact-methods {
+    @include grid-template($cols: repeat(3, auto));
+    margin-top: 3rem;
+
+    .statics-paragraph {
+      margin-top: 0.25rem;
+
+      @media (max-width: 60rem) {
+        font-size: $sm !important;
+      }
+    }
+
+    .contact-icon-title-wrapper {
+      @include grid-template($gap: 0.75rem, $cols: repeat(2, auto));
+      align-items: end;
+      width: fit-content;
+
+      .contact-icon {
+        width: 3.5rem;
+      }
+
+      .statics-paragraph {
+        color: $brand-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .suggestions-map-wrapper {
+    margin-top: 3rem;
+
+    #map {
+      height: 23rem;
+    }
+  }
+}

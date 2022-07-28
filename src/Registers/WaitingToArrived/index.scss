@@ -1,0 +1,244 @@
+@import "../../global";
+
+// TODO: The same as working. Refactor needed: Names should get more generic.
+.avatar-name-wrapper {
+  @include flex-container($align: center);
+
+  &.avatar-name-wrapper-absence {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  .avatar-btn {
+    border-radius: 50%;
+
+    @media (max-width: 40rem) {
+      .sm-avatar {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+      }
+    }
+  }
+
+  .name-mobile-wrapper {
+    margin-right: 0.5rem; //TODO
+    @include flex-container($dir: column, $align: center);
+
+    &.name-mobile-wrapper-absence {
+      margin: {
+        right: 0;
+        top: 0.5rem;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: $secondary;
+    }
+
+    .name {
+      @include main-text-size();
+    }
+
+    .name-mobile-divider {
+      width: 100%;
+
+      &.name-mobile-divider-absence {
+        margin: 0.25rem 0;
+      }
+    }
+
+    .mobile {
+      font-size: $md;
+
+      @media (max-width: 40rem) {
+        font-size: $xs;
+      }
+    }
+  }
+}
+
+// TODO: The same as the one going to be used in working and survey.
+.w8ing-header {
+  margin-bottom: 0.5rem;
+  @include flex-container($align: flex-end, $justify: space-between);
+
+  .header-popup-btns-wrapper {
+    @include flex-container($justify: space-between);
+    width: 7rem;
+
+    @media (max-width: 40rem) {
+      width: 5.4rem;
+    }
+
+    &.header-popup-btns-wrapper-absence {
+      margin-right: auto;
+    }
+
+    .header-popup-btn {
+      width: 2rem;
+
+      @media (max-width: 40rem) {
+        width: 1.5rem;
+      }
+    }
+  }
+}
+
+// .wa8ing-papers-grid-container-absence {
+//   @include grid-template($cols: 8rem 1fr);
+
+//   @media (max-width: 40rem) {
+//     @include grid-template($rows: auto 1fr, $cols: 1fr);
+//   }
+// }
+
+.w8ing-paper {
+  //   @include flex-container($dir: column);
+  display: flex;
+  flex-direction: column;
+
+  .w8ting-map-backdrop {
+    @include flex-container($fully-centered: true);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10e1;
+    width: 100%;
+    height: 21rem;
+    background: rgba(29, 29, 29, 0.7);
+    border-radius: 0.7rem;
+
+    @media (max-width: 80rem) {
+      height: 19rem;
+    }
+
+    @media (max-width: 40rem) {
+      height: 13rem;
+
+      @media (max-height: 40rem) {
+        height: 9rem;
+      }
+    }
+  }
+
+  .wa8ing-switch-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+
+    &.wa8ing-switch-wrapper-absence {
+      margin-top: 3rem;
+    }
+
+    &.wa8ing-switch-wrapper-absence-narrow {
+      margin-top: 0;
+    }
+
+    @media (max-width: 40rem) {
+      margin-top: 0.75rem;
+    }
+
+    .wa8ing-mobile-diplay-label {
+      color: $secondary;
+      margin-left: 0.25rem;
+      @include main-text-size();
+    }
+  }
+
+  .w8ing-btn-sets-wrapper {
+    @include grid-template($gap: 0.5rem, $cols: repeat(2, 1fr));
+    margin-top: auto;
+    justify-self: center;
+
+    .w8ing-btns-wrapper {
+      @include grid-template($gap: 0.5rem, $cols: repeat(2, 1fr));
+
+      &:first-of-type {
+        justify-self: left;
+      }
+
+      &:last-of-type {
+        justify-self: right;
+      }
+
+      button:first-of-type {
+        justify-self: left;
+      }
+
+      .lg-btn {
+        width: 8.7rem !important;
+
+        @media (max-width: 60rem) {
+          width: 7.5rem !important;
+        }
+      }
+
+      @media (max-width: 80rem) {
+        @include flex-container($dir: column);
+      }
+
+      @media (max-width: 40rem) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 40rem) {
+      margin-top: 1rem;
+
+      button {
+        width: 100%;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  #map {
+    height: 20rem;
+
+    @media (max-width: 80rem) {
+      height: 18rem;
+    }
+
+    //Adjust the backdrop too if you changed this.
+    @media (max-width: 40rem) {
+      height: 12rem;
+
+      @media (max-height: 40rem) {
+        height: 8rem;
+      }
+    }
+  }
+}
+
+.w8ing-extend-popup {
+  .w8ing-extend-time-field {
+    margin-top: 0.4rem !important; //Cause Mui's label of textfield disappeared partially.
+  }
+
+  .w8ing-extend-btns-wrapper {
+    text-align: center;
+    margin: {
+      bottom: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+      top: 2rem;
+    }
+
+    .w8ing-extend-back-btn {
+      margin-right: 1rem;
+    }
+
+    @media (max-width: 40rem) {
+      margin-top: 1rem;
+
+      @include grid-template($cols: repeat(2, 1fr));
+
+      .w8ing-extend-back-btn {
+        margin-right: 0;
+      }
+
+      .xs-btn {
+        width: 100%;
+        height: 2.5rem; //TODO: Code repeatition
+      }
+    }
+  }
+}

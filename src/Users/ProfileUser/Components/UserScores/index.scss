@@ -1,0 +1,95 @@
+@import "../../../../global";
+
+.user-scores {
+  @include grid-template($gap: 0, $cols: repeat(2, 1fr));
+
+  @media (max-width: 40rem) {
+    @include flex-container($dir: column);
+  }
+
+  .user-scores-data {
+    width: 100%;
+    .user-scores-star-score-wrapper {
+      @include flex-container($align: flex-end);
+      p {
+        margin: 0;
+        color: $neutral;
+        font-size: $xxlg;
+        margin-right: 0.5rem;
+        direction: ltr;
+      }
+
+      @media (max-width: 40rem) {
+        @include flex-container($dir: row-reverse);
+        margin-bottom: 1rem;
+
+        p {
+          font-size: $xlg;
+          margin-right: 0;
+          margin-left: 0.25rem;
+        }
+      }
+    }
+
+    .user-scores-heading {
+      $font-size: $lg;
+      margin: {
+        top: 2rem;
+        bottom: 1rem;
+      }
+      color: $secondary;
+
+      @media (max-width: 40rem) {
+        font-size: $md;
+        margin: {
+          top: 1rem;
+          bottom: 0.5rem;
+        }
+      }
+    }
+
+    .user-scores-items-wrapper {
+      @include flex-container();
+
+      @media (max-width: 80rem) {
+        @include grid-template($gap: 0.25rem, $rows: repeat(2, 1fr));
+      }
+
+      .grouped-score-items-wrapper {
+        @include flex-container();
+      }
+    }
+
+    .user-scores-comments {
+      @extend .user-scores-heading;
+      display: inline-block;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        color: $neutral;
+      }
+    }
+  }
+
+  .user-scores-editable-avatar-wrapper {
+    @include flex-container($dir: column, $fully-centered: true);
+
+    .user-scores-editable-avatar {
+      align-self: center;
+      justify-self: center;
+    }
+
+    .user-scores-user-name {
+      color: $neutral;
+      font-size: $xxlg;
+      margin: 1rem 0;
+
+      @media (max-width: 40rem) {
+        font-size: $lg;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

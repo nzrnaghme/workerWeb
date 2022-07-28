@@ -1,0 +1,121 @@
+@import "../global";
+
+.MuiMenu-list {
+  direction: rtl;
+  width: 12rem; // This is in accordance with the login lg btn width.
+}
+
+.logo-navigation-wrapper {
+  @include flex-container($align: center);
+}
+
+.our-header {
+  .logo-btn-container {
+    @include flex-container($justify: space-between, $align: center);
+    height: 4rem;
+    padding: 0 1rem; // Repetition, should be avoided!
+
+    .logo-wrapper {
+      width: 2.5rem;
+    }
+
+    .full-logo-wrapper {
+      width: 7rem;
+      display: flex;
+    }
+
+    .header-btns-wrapper {
+      @include flex-container($align: center, $justify: space-between);
+
+      .desktop-header-actions {
+        @include grid-template($cols: repeat(3, auto));
+        align-items: center;
+
+        .desktop-header-entry-btn {
+          height: 2.5rem;
+          font: inherit;
+          font: {
+            size: $lg;
+            weight: bold;
+          }
+          color: $brand-color;
+          border-radius: 0.25rem;
+        }
+
+        .desktop-header-avatar-btn {
+          border-radius: 50%;
+          background: transparent;
+          width: fit-content;
+          height: fit-content;
+          border: 3px solid #003a45;
+        }
+      }
+    }
+  }
+
+  .header-banners-container {
+    padding: 0 1rem; // Repetition, should be avoided!
+
+    .header-slogan {
+      font-size: $lg;
+      color: $primary;
+      margin: 1rem 0;
+
+      p {
+        margin: 0.25rem 0;
+      }
+    }
+
+    .header-banners {
+      @include grid-template($cols: repeat(3, 1fr));
+    }
+  }
+}
+
+.mobile-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #fafbfb;
+
+  .mobile-header-items {
+    @include flex-container($align: center, $justify: space-between);
+    height: 4rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    .logo-wrapper-mobile {
+      width: 2rem;
+    }
+
+    .full-logo-wrapper-mobile {
+      display: flex;
+      width: 6rem;
+    }
+
+    .mobile-header-actions {
+      @include grid-template($cols: repeat(3, auto), $gap: 0.5rem);
+      align-items: center;
+
+      .mobile-header-entry-btn {
+        height: 2rem;
+        font: inherit;
+        font: {
+          size: $md;
+          weight: bold;
+        }
+        color: $brand-color;
+        border-radius: 0.25rem;
+      }
+
+      .mobile-header-avatar-btn {
+        border-radius: 50%;
+        background: transparent;
+        width: fit-content;
+        height: fit-content;
+        border: 3px solid #003a45;
+      }
+    }
+  }
+}

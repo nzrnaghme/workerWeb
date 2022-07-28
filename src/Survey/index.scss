@@ -1,0 +1,96 @@
+@import "../global";
+
+// TODO: The same as the one which has been used in working and w8ing.
+.survey-header {
+  margin-bottom: 0.5rem;
+  @include flex-container($align: flex-end, $justify: space-between);
+
+  .survey-avatar-name-wrapper {
+    @include flex-container($align: center);
+
+    .avatar-btn {
+      border-radius: 50%;
+
+      @media (max-width: 40rem) {
+        .sm-avatar {
+          width: 2.5rem !important;
+          height: 2.5rem !important;
+        }
+      }
+    }
+
+    p {
+      @include main-text-size();
+      margin: 0;
+      margin-right: 0.5rem; //TODO
+      color: $secondary;
+    }
+  }
+
+  .header-popup-btn {
+    width: 2rem;
+
+    @media (max-width: 40rem) {
+      width: 1.5rem;
+    }
+  }
+}
+
+// Code Repetition Warning: It's just alike with the request detail form.
+.survey-paper {
+  padding: 2rem; //TODO:This should later become an uniform standard on papers.
+
+  @media (max-width: 40rem) {
+    padding: 1rem;
+
+    min-height: calc(100vh - 13rem);
+    @include flex-container($dir: column, $justify: space-between);
+  }
+
+  .survey-paper-data {
+    @media (max-width: 40rem) {
+      width: 100%;
+    }
+
+    .survey-hint {
+      font-size: $xlg;
+      color: $secondary;
+      margin: 0 0 2rem 0;
+
+      @media (max-width: 40rem) {
+        font-size: $md;
+      }
+    }
+
+    .survey-params-wrapper {
+      margin-bottom: 1rem;
+
+      &.survey-params-wrapper-isclient {
+        @include grid-template($cols: repeat(3, 1fr));
+
+        @media (max-width: 25rem) {
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .survey-btns-wrapper {
+    @include grid-template($cols: repeat(2, 1fr));
+    margin-top: 2rem;
+
+    .survey-register-btn {
+      justify-self: end;
+    }
+
+    @media (max-width: 40rem) {
+      width: 100%;
+
+      //TODO: Code Repetition Warning!
+      button {
+        width: 100%;
+        height: 2.5rem;
+      }
+    }
+  }
+}

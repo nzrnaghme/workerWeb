@@ -1,0 +1,22 @@
+.working-worktime-popup {
+  // TODO: This is repeated in many places. Refactor needed.
+  .MuiDialog-paper {
+    width: 30rem;
+  }
+
+  .popup-title {
+    margin-bottom: 0.6rem; //Complementary for Mui's textfield margin adjustment.
+
+    @media (max-width: 40rem) {
+      margin-bottom: 0.1rem; //Complementary for Mui's textfield margin adjustment.
+    }
+  }
+
+  .duration-picker-wrapper {
+    margin-top: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+
+    .MuiOutlinedInput-input {
+      padding: 10.5px 14px !important;
+    }
+  }
+}

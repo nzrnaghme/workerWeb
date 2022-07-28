@@ -1,0 +1,51 @@
+@import "../../../../global";
+
+.personal-info-items-wrapper {
+  @include grid-container();
+  grid-template-areas:
+    "item1 item2"
+    "item3 item4"
+    "item5 item6";
+
+  @media (max-width: 40rem) {
+    grid-template-areas:
+      "item1 item1"
+      "item2 item2"
+      "item3 item3"
+      "item4 item4"
+      "item5 item6";
+  }
+
+  .personal-info-item1 {
+    grid-area: item1;
+  }
+
+  .personal-info-item2 {
+    grid-area: item2;
+  }
+
+  .personal-info-item3 {
+    grid-area: item3;
+  }
+
+  .personal-info-item4 {
+    grid-area: item4;
+  }
+
+  .personal-info-item5 {
+    grid-area: item5;
+  }
+
+  .personal-info-item6 {
+    grid-area: item6;
+  }
+}
+
+.personal-info-warning {
+  margin: {
+    top: 2rem;
+    bottom: 0;
+  }
+  color: $warning;
+  font-size: $sm;
+}

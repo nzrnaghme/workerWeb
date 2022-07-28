@@ -1,0 +1,92 @@
+@import "../../global";
+
+// Styles for long mobiles which have a single form paper
+// .single-form {
+//   @media (max-width: 40rem) {
+//     @include flex-container(
+//       $dir: column,
+//       $justify: space-between,
+//       // $align: center
+//     );
+//     min-height: calc(100vh - 10rem);
+
+//     .single-form-btn {
+//       @media (max-width: 40rem) {
+//         width: 100%;
+
+//         button {
+//           width: 100%;
+//           height: 2.5rem !important;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.user-registry-paper {
+  padding: 2rem;
+
+  @media (max-width: 40rem) {
+    padding: 1rem;
+
+    display: flex;
+    //So that the button obeys justifyContent in the child el.
+    min-height: calc(100vh - 10rem);
+  }
+
+  .user-registry-form {
+    width: 100%;
+    @include flex-container($dir: column, $align: center);
+
+    @media (max-width: 40rem) {
+      justify-content: space-between;
+    }
+
+    .user-registry-form-grid-avatar {
+      @include flex-container($dir: column, $align: center);
+      width: 100%;
+    }
+
+    .user-registry-btn {
+      @media (max-width: 40rem) {
+        width: 100%;
+
+        button {
+          width: 100%;
+          height: 2.5rem !important;
+        }
+      }
+    }
+  }
+
+  .register-grid-container {
+    margin: 1rem 0 2rem 0;
+    @include grid-container();
+    width: 100%;
+
+    grid-template-areas:
+      "item-1"
+      "item-2"
+      "item-3";
+
+    .register-grid-item {
+      // TODO:
+      // height: 4rem;
+    }
+
+    .register-grid-item-1 {
+      @extend .register-grid-item;
+      grid-area: item-1;
+    }
+
+    .register-grid-item-2 {
+      @extend .register-grid-item;
+      grid-area: item-2;
+    }
+
+    .register-grid-item-3 {
+      @extend .register-grid-item;
+      grid-area: item-3;
+    }
+  }
+}

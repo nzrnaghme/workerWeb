@@ -1,0 +1,55 @@
+@import "../global";
+
+//TODO: Code duplication: Is alike w8ing.
+.working-header {
+  margin-bottom: 0.5rem;
+  @include flex-container($align: flex-end, $justify: space-between);
+
+  .header-popup-btns-wrapper {
+    width: 5rem;
+    @include flex-container($justify: space-between);
+
+    @media (max-width: 40rem) {
+      width: 3.8rem;
+    }
+
+    &.header-popup-btns-wrapper-lg-avatar {
+      margin-right: auto;
+    }
+
+    .header-popup-btn {
+      width: 2rem;
+
+      @media (max-width: 40rem) {
+        width: 1.5rem;
+      }
+    }
+  }
+}
+
+// TODO: Could be a general class for all popups.
+.working-popup-btns-wrapper {
+  text-align: center;
+  margin: {
+    bottom: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+    top: 2rem;
+  }
+
+  .working-popup-back-btn {
+    margin-right: 1rem;
+  }
+
+  @media (max-width: 40rem) {
+    @include grid-template($cols: repeat(2, 1fr));
+    margin-top: 1rem;
+
+    .working-popup-back-btn {
+      margin-right: 0;
+    }
+
+    .xs-btn {
+      width: 100%;
+      height: 2.5rem; //TODO: Code repeatition
+    }
+  }
+}

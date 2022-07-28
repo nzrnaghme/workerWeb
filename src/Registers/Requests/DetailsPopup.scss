@@ -1,0 +1,94 @@
+@import "../../global";
+
+.upsert-details-popup {
+  .upsert-details-fields-grid-wrapper {
+    @include grid-container($gap: 1rem, $inPopup: true);
+    grid-template-areas:
+      "item-1"
+      "item-2"
+      "item-3";
+
+    @media (max-width: 40rem) {
+      gap: 0.5rem;
+    }
+
+    .upsert-details-fields-grid-item-1 {
+      position: relative;
+      margin-top: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+      grid-area: item-1;
+
+      .req-display-days {
+        input {
+          padding-left: 2rem;
+        }
+      }
+
+      .arrow-btn {
+        @include flex-container($fully-centered: true);
+        position: absolute;
+        font-size: $xxlg;
+        color: $primary;
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 50%;
+        top: 15px;
+        cursor: pointer;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      .arrow-btn-up {
+        @extend .arrow-btn;
+        left: 45px;
+      }
+
+      .arrow-btn-down {
+        @extend .arrow-btn;
+        left: 0;
+      }
+    }
+
+    .upsert-details-fields-grid-item-2 {
+      grid-area: item-2;
+
+      textarea {
+        text-align: justify !important;
+        white-space: unset; //For Firefox
+        font-size: $md;
+      }
+    }
+
+    .upsert-details-fields-grid-item-3 {
+      grid-area: item-3;
+    }
+  }
+
+  .upsert-details-btns-wrapper {
+    text-align: center;
+    margin: {
+      bottom: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+      top: 2rem;
+    }
+
+    @media (max-width: 40rem) {
+      margin-top: 1rem;
+
+      @include grid-template($cols: repeat(2, 1fr));
+
+      .xs-btn {
+        width: 100%;
+        height: 2.5rem; //TODO: Code repeatition
+      }
+    }
+
+    .upsert-details-back-btn {
+      margin-right: 1rem;
+
+      @media (max-width: 40rem) {
+        margin-right: 0;
+      }
+    }
+  }
+}

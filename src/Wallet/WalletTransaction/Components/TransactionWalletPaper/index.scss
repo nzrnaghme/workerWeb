@@ -1,0 +1,70 @@
+@import "../../../../global";
+
+.transaction-wallet-paper {
+  @include flex-container($dir: column);
+  height: fit-content;
+  flex-grow: 1;
+  margin: 0 !important;
+  color: $secondary !important;
+  font-size: $sm !important;
+  padding: 0.5rem !important;
+
+  .transaction-wallet-paper-header {
+    @include grid-template($gap: 0.25rem, $rows: repeat(2, auto));
+    width: 100%;
+    margin-bottom: 0.25rem;
+
+    .transaction-wallet-paper-status-wrapper {
+      @include flex-container($align: center, $justify: space-between);
+      .status {
+        @include flex-container($align: center);
+        font-size: $xxxlg;
+        span {
+          margin-right: 0.25rem;
+          font-size: $sm !important;
+        }
+      }
+
+      .transaction-wallet-paper-date-time {
+        .datetime-dash-seperator {
+          margin: 0 0.2rem;
+        }
+      }
+    }
+
+    .t-w-paper-header-pay-detail {
+      font-size: $md;
+      color: $primary;
+    }
+  }
+
+  .transaction-wallet-paper-main-divider {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .transaction-wallet-paper-main {
+    width: 100%;
+    @include grid-template($gap: 0.5rem, $rows: repeat(2, auto));
+
+    .transaction-wallet-paper-content {
+      @include grid-template($gap: 0.5rem, $cols: repeat(2, 1fr));
+
+      .t-w-paper-content-2nd-span {
+        justify-self: flex-end;
+
+        &.wallet-increase {
+          color: $success !important;
+        }
+
+        &.wallet-decrease {
+          color: $danger !important;
+        }
+
+        span:first-of-type {
+          margin-left: 0.25rem;
+        }
+      }
+    }
+  }
+}

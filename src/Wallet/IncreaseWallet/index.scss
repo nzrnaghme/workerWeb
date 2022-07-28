@@ -1,0 +1,64 @@
+@import "../../global";
+
+// Code Repetition Warning: It's just alike with the request detail form.
+.wallet-paper {
+  padding: 2rem; //TODO:This should later become an uniform standard on papers.
+
+  @media (max-width: 40rem) {
+    padding: 1rem;
+
+    min-height: calc(100vh - 10rem);
+    display: flex;
+  }
+
+  .wallet-paper-form-wrapper {
+    @include flex-container($dir: column, $align: center);
+    width: 100%;
+
+    @media (max-width: 40rem) {
+      justify-content: space-between;
+    }
+
+    .wallet-paper-data-wrapper {
+      @include flex-container($dir: column, $align: center);
+      width: 100%;
+
+      .wallet-ballence {
+        @include flex-container($justify: space-between);
+        width: 100%;
+        margin-bottom: 2rem;
+
+        p {
+          margin: 0;
+          font-size: $xxlg;
+          color: $secondary;
+
+          @media (max-width: 40rem) {
+            font-size: $lg;
+          }
+        }
+      }
+    }
+
+    .wallet-paper-btns-wrapper {
+      @include grid-template($cols: repeat(2, 1fr));
+      margin-top: 2rem;
+      width: 100%;
+
+      .wallet-sumbit-btn-wrapper {
+        justify-self: end;
+      }
+
+      @media (max-width: 40rem) {
+        div {
+          width: 100%;
+
+          button {
+            height: 2.5rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

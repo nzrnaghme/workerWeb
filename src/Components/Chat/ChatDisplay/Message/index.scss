@@ -1,0 +1,188 @@
+@import "../../../../global";
+
+.Message {
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+  text-align: right;
+  word-break: break-word;
+  white-space: pre-wrap;
+
+  .MsgDeliveryDetailsContainer {
+    margin-top: 0.1rem;
+    font-size: 0.7rem;
+
+    @media (max-width: 60rem) {
+      font-size: 0.6rem;
+    }
+
+    @media (max-width: 37.5rem) {
+      font-size: 0.55rem;
+    }
+  }
+
+  @media (max-width: 60rem) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 37.5rem) {
+    font-size: 0.75rem;
+  }
+}
+
+.IsMine {
+  border-bottom-right-radius: 0;
+  align-self: flex-start;
+  background-color: $brand-color;
+  color: white;
+
+  .IsMineBtn {
+    background-color: darken($brand-color, 10%);
+    color: white;
+  }
+}
+
+.IsNotMine {
+  background-color: lighten($secondary, 30%);
+  color: $primary;
+  border-top-left-radius: 0;
+
+  .IsNotMineBtn {
+    background-color: $primary;
+    color: lighten($secondary, 30%);
+  }
+}
+
+div#controlBar.controlBar {
+  width: 2rem !important;
+}
+
+.FileMessage {
+  @include flex-container($align: stretch);
+  min-width: 12rem;
+  width: 40%;
+
+  &.voice {
+    width: fit-content;
+    position: relative;
+
+    .file-remove-btn {
+      position: absolute;
+      font-size: 0.6rem;
+      background: #444343;
+      top: 30px;
+      right: 1.5px;
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    .FileSize {
+      position: absolute;
+      font-size: 0.7rem;
+      color: darken($secondary, 10%);
+      top: 34px;
+      left: 35px;
+    }
+
+    .voice-downloader {
+      width: 100%;
+
+      .sound-wave-wrapper {
+        width: 100%;
+        height: 3.5rem;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .file-btn {
+    @include flex-container($fully-centered: true);
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+
+    @media (max-width: 60rem) {
+      font-size: 0.8rem;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    @media (max-width: 37.5rem) {
+      font-size: 0.6rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .file-remove-btn {
+    @extend .file-btn;
+    color: $danger;
+  }
+
+  .MsgInfoAndDownloadBtnContainer {
+    @include flex-container($justify: space-between);
+    // flex-shrink: 0;
+    margin-left: 0.1rem;
+    .FileBtnsAndStatusContainer {
+      @include flex-container($dir: column, $align: space-between);
+
+      .file-btns-wrapper {
+        @include grid-template($cols: repeat(2, 1fr), $gap: 0rem);
+
+        .FileDownloadBtn {
+          @extend .file-btn;
+        }
+      }
+    }
+
+    .FileInfoContainer {
+      @include flex-container($dir: column, $align: flex-end);
+      margin-top: 0.4rem;
+      font-size: 0.75rem;
+
+      .FileSize {
+        margin-top: 0.2rem;
+        font-size: 0.6rem;
+
+        span {
+          margin-left: 0.1rem;
+        }
+
+        @media (max-width: 37.5rem) {
+          margin-top: 0rem;
+        }
+      }
+
+      .remove-file-btn {
+        cursor: pointer;
+      }
+
+      @media (max-width: 37.5rem) {
+        margin-top: 0.1rem;
+      }
+    }
+  }
+
+  .FileTypeIcon {
+    @include flex-container($fully-centered: true);
+    width: 3rem;
+    // min-width: 2.5rem;
+
+    @media (max-width: 37.5rem) {
+      width: 2.25rem;
+    }
+  }
+
+  @media (max-width: 37.5rem) {
+    min-width: 11.5rem;
+  }
+}
+
+.NoMsgsYet {
+  border-top-left-radius: 0.7rem;
+  align-self: center;
+}

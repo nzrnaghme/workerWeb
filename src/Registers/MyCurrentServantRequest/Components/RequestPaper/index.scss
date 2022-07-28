@@ -1,0 +1,79 @@
+@import "../../../../global";
+
+.currentreqs-req-paper {
+  @include flex-container($dir: column);
+  height: 10rem;
+  flex-grow: 1;
+  margin: 0 !important;
+  color: $secondary !important;
+  padding: 0.5rem !important;
+  //   padding-top: 0.25rem !important;
+
+  .currentreqs-req-paper-header {
+    @include grid-template($gap: 0.25rem, $rows: repeat(2, auto));
+    width: 100%;
+    margin-bottom: 0.25rem;
+
+    .currentreqs-req-paper-header-items-wrapper {
+      @include flex-container($align: center, $justify: flex-end);
+
+      .req-paper-header-item {
+        // margin-right: 0 !important;
+
+        .req-paper-date-time {
+          // TODO: Code Repetition Warning
+          .datetime-dash-seperator {
+            margin: 0 0.2rem;
+          }
+        }
+      }
+
+      .currentreqs-req-paper-emergent-icon {
+        color: $danger !important;
+      }
+    }
+  }
+
+  .currentreqs-req-paper-main-divider {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .currentreqs-req-paper-main {
+    @include flex-container($dir: column);
+    width: 100%;
+    flex-grow: 1;
+
+    .currentreqs-req-paper-title {
+      margin: 0;
+      font-size: $md;
+      font-weight: bold;
+
+      .currentreqs-req-paper-title-servant {
+        color: $secondary;
+        margin-right: 0.25rem;
+        font-weight: 400;
+      }
+    }
+
+    .currentreqs-req-paper-title-normal {
+      @extend .currentreqs-req-paper-title;
+      color: $primary;
+    }
+
+    .currentreqs-req-paper-title-emergancy {
+      @extend .currentreqs-req-paper-title;
+      color: $danger;
+    }
+
+    .currentreqs-req-paper-footer-btns-wrapper {
+      @include flex-container($align: center, $justify: flex-end);
+      width: 100%;
+      margin-top: auto;
+
+      button {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}

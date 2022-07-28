@@ -1,0 +1,24 @@
+.fake-sort {
+  margin-bottom: 1rem;
+
+  .MuiSelect-root {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sort-filter-popup-mobile {
+  .MuiDialog-paper {
+    width: 18rem;
+    padding: 0.5rem 0;
+
+    .sort-mobile-item-active {
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .sort-icon {
+      width: 2rem;
+      margin-left: 0.5rem;
+    }
+  }
+}

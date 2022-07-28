@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="872.001" height="134" viewBox="0 0 872.001 134">
+  <defs>
+    <filter id="Union_6" x="415.873" y="0" width="456.129" height="134" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Subtraction_3" x="0" y="0" width="477.232" height="133.998" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1282" data-name="Group 1282" transform="translate(-979.998 -166)">
+    <g id="Group_740" data-name="Group 740" transform="translate(-6701.489 -3552)">
+      <g transform="matrix(1, 0, 0, 1, 7681.49, 3718)" filter="url(#Union_6)">
+        <path id="Union_6-2" data-name="Union 6" d="M56.044,104H54.187L1.589,55.535a4.727,4.727,0,0,1,0-7.071L54.186,0H413.129a13,13,0,0,1,13,13V91a13,13,0,0,1-13,13Z" transform="translate(430.87 15)" fill="#fff"/>
+      </g>
+      <text id="درخواستهای_من" data-name="درخواستهای من" transform="translate(8449.489 3796)" fill="#1665c7" font-size="45" font-family="IRANSansMobileNoEn, IRAN SansMobileNoEn"><tspan x="-284.948" y="0">درخواستهای من</tspan></text>
+      <path id="Path_204" data-name="Path 204" d="M8437.151,3768.8v33.143" transform="translate(26.489)" fill="none" stroke="rgba(70,105,148,0.49)" stroke-width="1"/>
+      <g id="_7100206_paper_file_document_resume_receipt_icon" data-name="7100206_paper_file_document_resume_receipt_icon" transform="translate(8475.489 3768)">
+        <path id="Path_205" data-name="Path 205" d="M63.7,40.52H40.143a3.342,3.342,0,0,0-3.319,3H31.579A.479.479,0,0,0,31.1,44V64.028a3.341,3.341,0,0,0,3.337,3.336h8.079v7.1a.479.479,0,0,0,.479.479H66.553a.479.479,0,0,0,.479-.479V43.857A3.341,3.341,0,0,0,63.7,40.52ZM32.063,64.028V44.485h4.744V64.028a2.372,2.372,0,1,1-4.745,0ZM36.777,66.4a3.327,3.327,0,0,0,.994-2.373V43.857a2.373,2.373,0,1,1,4.745,0V66.4Zm29.294,7.583H43.479V43.857a3.324,3.324,0,0,0-.994-2.373H63.7a2.376,2.376,0,0,1,2.373,2.373Z" transform="translate(-31.1 -40.52)" fill="#0f4b95"/>
+        <path id="Path_206" data-name="Path 206" d="M239.649,130.62h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-207.642 -123.422)" fill="#0f4b95"/>
+        <path id="Path_207" data-name="Path 207" d="M239.649,184.19h-16.2a.482.482,0,0,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-207.642 -172.713)" fill="#0f4b95"/>
+        <path id="Path_208" data-name="Path 208" d="M239.649,237.76h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-207.642 -222.003)" fill="#0f4b95"/>
+        <path id="Path_209" data-name="Path 209" d="M239.649,291.34h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-207.642 -271.303)" fill="#0f4b95"/>
+        <path id="Path_210" data-name="Path 210" d="M234.016,344.92H223.443a.482.482,0,1,0,0,.965h10.574a.482.482,0,0,0,0-.963Z" transform="translate(-207.633 -320.603)" fill="#0f4b95"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 980, 166)" filter="url(#Subtraction_3)">
+      <path id="Subtraction_3-2" data-name="Subtraction 3" d="M-22047.768-20639h-396.812l-48.937-48.463A4.94,4.94,0,0,1-22495-20691a4.941,4.941,0,0,1,1.482-3.535l48.938-48.467h396.811l-48.934,48.467a4.94,4.94,0,0,0-1.477,3.535,4.938,4.938,0,0,0,1.477,3.533l48.934,48.461Z" transform="translate(22510 20758)" fill="#fff"/>
+    </g>
+    <g id="Group_1200" data-name="Group 1200" transform="translate(-18)">
+      <text id="همیاران" transform="translate(1315 244)" fill="#1665c7" font-size="45" font-family="IRANSansMobileNoEn, IRAN SansMobileNoEn"><tspan x="-138.541" y="0">همیاران</tspan></text>
+      <path id="Path_479" data-name="Path 479" d="M8437.151,3768.8v33.143" transform="translate(-7110 -3552)" fill="none" stroke="rgba(70,105,148,0.49)" stroke-width="1"/>
+      <g id="_7100206_paper_file_document_resume_receipt_icon-2" data-name="7100206_paper_file_document_resume_receipt_icon" transform="translate(1307.9 175.48)">
+        <path id="Path_205-2" data-name="Path 205" d="M63.7,40.52H40.143a3.342,3.342,0,0,0-3.319,3H31.579A.479.479,0,0,0,31.1,44V64.028a3.341,3.341,0,0,0,3.337,3.336h8.079v7.1a.479.479,0,0,0,.479.479H66.553a.479.479,0,0,0,.479-.479V43.857A3.341,3.341,0,0,0,63.7,40.52ZM32.063,64.028V44.485h4.744V64.028a2.372,2.372,0,1,1-4.745,0ZM36.777,66.4a3.327,3.327,0,0,0,.994-2.373V43.857a2.373,2.373,0,1,1,4.745,0V66.4Zm29.294,7.583H43.479V43.857a3.324,3.324,0,0,0-.994-2.373H63.7a2.376,2.376,0,0,1,2.373,2.373Z" transform="translate(0 0)" fill="#0f4b95"/>
+        <path id="Path_206-2" data-name="Path 206" d="M239.649,130.62h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -82.902)" fill="#0f4b95"/>
+        <path id="Path_207-2" data-name="Path 207" d="M239.649,184.19h-16.2a.482.482,0,0,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -132.193)" fill="#0f4b95"/>
+        <path id="Path_208-2" data-name="Path 208" d="M239.649,237.76h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -181.483)" fill="#0f4b95"/>
+        <path id="Path_209-2" data-name="Path 209" d="M239.649,291.34h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -230.783)" fill="#0f4b95"/>
+        <path id="Path_210-2" data-name="Path 210" d="M234.016,344.92H223.443a.482.482,0,1,0,0,.965h10.574a.482.482,0,0,0,0-.963Z" transform="translate(-176.533 -280.083)" fill="#0f4b95"/>
+      </g>
+    </g>
+  </g>
+</svg>

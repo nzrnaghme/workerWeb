@@ -1,0 +1,88 @@
+@import "../../global";
+
+.comments-section {
+  @include hide-scrollbars();
+  overflow: auto;
+  height: 17rem; //temp
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+  .simplebar-scrollbar::before {
+    background: $secondary;
+    width: 0.3rem !important;
+    margin-right: 0.2rem;
+
+    @media (max-width: 40rem) {
+      width: 0.2rem !important;
+    }
+  }
+
+  .comment {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    color: $secondary;
+    @include grid-template($cols: 1fr auto);
+
+    @media (max-width: 40rem) {
+      gap: 0.5rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .comment-date-text {
+      .comment-date {
+        font-size: $xxs;
+
+        @media (max-width: 40rem) {
+          font-size: $xxxs;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: $sm;
+        text-align: justify !important;
+        white-space: unset; //For Firefox
+
+        @media (max-width: 40rem) {
+          font-size: $xxs;
+        }
+      }
+    }
+
+    .comments-votes {
+      @include grid-template($cols: repeat(3, 1fr), $gap: 0.5rem);
+
+      @media (max-width: 40rem) {
+        gap: 0.25rem;
+      }
+    }
+
+    .comments-vote {
+      @include flex-container($dir: column, $align: center);
+      font-size: $sm;
+
+      @media (max-width: 40rem) {
+        font-size: $xxxs;
+      }
+
+      span {
+        margin-bottom: 0.5rem;
+      }
+
+      .comments-vote-icon {
+        &.blue {
+          color: $neutral;
+        }
+
+        &.red {
+          color: $danger;
+        }
+      }
+    }
+  }
+}

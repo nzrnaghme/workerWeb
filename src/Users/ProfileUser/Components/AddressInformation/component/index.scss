@@ -1,0 +1,65 @@
+.show-all-address {
+  width: 100%;
+  .header-show-address {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    @media (max-width: 40rem) {
+      width: 70%;
+    }
+    span {
+      @media (max-width: 40rem) {
+        font-size: 11px;
+      }
+    }
+  }
+  .div-bet-header-show-address {
+    margin-bottom: 1rem;
+  }
+  .container-show-address {
+    display: flex;
+    margin-right: -9px;
+    justify-content: space-between;
+    width: 100%;
+    span {
+      margin: auto;
+      @media (max-width: 40rem) {
+        margin: 0px;
+        font-size: 10px;
+      }
+    }
+    .addressText {
+      margin-left: 0px !important ;
+      flex-basis: 330px;
+      @media (max-width: 60rem) {
+        flex-basis: 200px;
+      }
+    }
+    .codeAddress {
+      flex-basis: 100px;
+      @media (max-width: 40rem) {
+        flex-basis: 89px;
+      }
+    }
+    .edit {
+      cursor: pointer;
+      color: orange;
+      @media (max-width: 40rem) {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+    .delete {
+      cursor: pointer;
+      color: red;
+    }
+    .default {
+      .MuiSvgIcon-root {
+        @media (max-width: 40rem) {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+}

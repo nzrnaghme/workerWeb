@@ -1,0 +1,12 @@
+.phone-num-field-wrapper {
+  width: 100%;
+
+  .MuiInputAdornment-positionEnd {
+    margin-right: 0.5px !important;
+
+    .MuiTypography-colorTextSecondary {
+      color: inherit !important;
+      font-size: inherit !important;
+    }
+  }
+}

@@ -1,0 +1,204 @@
+@import "../global";
+
+.our-footer {
+  height: 16rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .footer-container {
+    @include flex-container($align: center, $justify: space-between);
+    padding: 0 1rem;
+    height: 100%;
+  }
+
+  .footer-main {
+    height: 12rem;
+    background: $pale-gray;
+
+    .footer-main-container {
+      @extend .footer-container;
+
+      .footer-main-details {
+        @include grid-template($gap: 2rem, $cols: repeat(3, 1fr));
+        width: 36rem;
+
+        .footer-main-detail {
+          .footer-main-detail-title {
+            font: {
+              weight: bold;
+              size: $md;
+            }
+            color: $primary;
+            margin: 0;
+            margin-bottom: 1rem;
+          }
+
+          .footer-main-detail-links-wrapper {
+            @include flex-container($dir: column);
+            height: 5rem;
+            font-size: $sm;
+
+            a {
+              color: $secondary;
+              text-decoration: none;
+              margin-bottom: 0.5rem;
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+
+              &:hover {
+                color: $brand-color;
+              }
+            }
+          }
+        }
+      }
+      .footer-main-signs {
+        width: 20rem;
+      }
+    }
+  }
+
+  .footer-footer {
+    height: 4rem;
+    background: $brand-color;
+
+    .footer-footer-container {
+      @extend .footer-container;
+      color: white;
+
+      .copyright {
+        font-size: $sm;
+        margin: 0;
+      }
+
+      .social-media {
+        @include flex-container($align: center, $justify: space-between);
+        width: 8rem;
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fafbfb;
+  z-index: 1000; //TODO: Should appear under modals.
+  height: 4rem;
+
+  &.mobile-home-footer {
+    background: $brand-color;
+    @include grid-template($cols: repeat(3, auto));
+    justify-items: center;
+    align-items: center;
+
+    .mobile-home-footer-links {
+      color: white;
+      text-decoration: none;
+      font-size: $sm;
+    }
+  }
+
+  .mobile-footer-item-link {
+    @include flex-container($justify: space-between, $align: center);
+    box-sizing: border-box;
+    margin: 0.5rem auto;
+
+    .mobile-main-detail {
+      text-align: center;
+
+      .mobile-main-detail-links-wrapper {
+        margin-top: 0rem;
+
+        .mobile-main-footer-links {
+          @include flex-container($align: center);
+          height: 1rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .mobile-footer-item {
+    color: $primary;
+    font-size: $xs;
+    margin: 0;
+    text-align: center;
+    line-height: 1rem;
+  }
+
+  .mobile-footer-links {
+    @include flex-container($align: center);
+    height: 4rem;
+
+    .mobile-footer-links-vertical-divider {
+      height: 60%;
+      align-self: center;
+    }
+
+    .mobile-footer-link {
+      text-decoration: none;
+      height: 100%;
+      flex: 1;
+
+      .mobile-footer-link-items {
+        @include flex-container($align: center);
+        width: fit-content;
+        margin: auto;
+        height: 100%;
+        box-sizing: border-box;
+
+        //TODO: Padding could be revised.
+        @media (max-width: 30rem) {
+          padding: 0 1rem;
+        }
+
+        @media (max-width: 25rem) {
+          padding: 0 0.55rem;
+        }
+      }
+
+      .mobile-footer-link-icon {
+        width: 2rem;
+        margin-left: 0.3rem;
+      }
+
+      .mobile-footer-link-title {
+        margin: 0;
+        font-size: $xxs;
+      }
+
+      .mobile-footer-link-title-emergent {
+        @extend .mobile-footer-link-title;
+        // color: $danger;
+        color: #ef413d;
+      }
+
+      .mobile-footer-link-title-suggested {
+        @extend .mobile-footer-link-title;
+        // color: $success;
+        color: #1f9b90;
+      }
+
+      .mobile-footer-link-title-daily {
+        @extend .mobile-footer-link-title;
+        // color: $warning;
+        color: #ffc20e;
+        // color: #d49012;
+      }
+    }
+  }
+}

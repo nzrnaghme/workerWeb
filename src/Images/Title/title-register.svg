@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="453.64" height="134" viewBox="0 0 453.64 134">
+  <defs>
+    <filter id="Union_6" x="0" y="0" width="453.64" height="134" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_221" data-name="Group 221" transform="translate(-8097.361 -3718)">
+    <g transform="matrix(1, 0, 0, 1, 8097.36, 3718)" filter="url(#Union_6)">
+      <path id="Union_6-2" data-name="Union 6" d="M55.717,104H53.871L1.58,55.535a4.746,4.746,0,0,1,0-7.071L53.87,0H410.639a13,13,0,0,1,13,13V91a13,13,0,0,1-13,13Z" transform="translate(15 15)" fill="#fff"/>
+    </g>
+    <text id="ثبت_نام" data-name="ثبت نام" transform="translate(8418 3796)" fill="#1665c7" font-size="45" font-family="IRANSansMobileNoEn, IRAN SansMobileNoEn"><tspan x="-139.617" y="0">ثبت نام</tspan></text>
+    <path id="Path_204" data-name="Path 204" d="M8437.151,3768.8v33.143" fill="none" stroke="rgba(70,105,148,0.49)" stroke-width="1"/>
+  </g>
+</svg>

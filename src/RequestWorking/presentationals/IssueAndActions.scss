@@ -1,0 +1,115 @@
+@import "../../global";
+
+.working-issue-actions-paper {
+  display: flex;
+  flex-direction: column;
+
+  .working-switch-wrapper {
+    text-align: center;
+    label {
+      font-size: $md; //TODO: Font sizes should have a allied standard.
+
+      @media (max-width: 40rem) {
+        font-size: $sm; //TODO: Font sizes should have a allied standard.
+      }
+    }
+    margin-top: 2.5rem;
+
+    @media (max-width: 40rem) {
+      margin-top: 0;
+    }
+  }
+
+  .working-btns-wrapper {
+    @include grid-template($rows: repeat(2, 1fr), $gap: 0.5rem);
+    width: fit-content;
+    align-self: center;
+    margin-top: auto;
+
+    .working-security-btn-wrapper {
+      button {
+        width: 100% !important;
+      }
+    }
+
+    .lg-btn {
+      width: 8.7rem !important;
+
+      //TODO:
+      @media (max-width: 60rem) {
+        width: 7.5rem !important;
+      }
+    }
+
+    .working-margined-btn {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 40rem) {
+      margin-top: 1.5rem; // TODO: Check if it's in coordination with other forms.
+      width: 100%;
+
+      .working-margined-btn {
+        margin-right: 0;
+      }
+
+      .working-lower-btns-wrapper {
+        @include grid-template($cols: repeat(2, 1fr), $gap: 0.5rem);
+      }
+
+      .sm-btn {
+        width: 100%;
+        height: 2.5rem; //TODO: Code repeatition
+      }
+    }
+  }
+}
+
+.working-popup {
+  // TODO: This is repeated in many places. Refactor needed.
+  & .MuiDialog-paper {
+    width: 30rem;
+  }
+
+  .working-upper-textfield-wrapper {
+    margin-top: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+  }
+}
+
+.DurationBtnContainer {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+
+  .DurationBtn {
+    width: 4rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    @media (max-width: 80rem) {
+      width: 3rem;
+      padding: 0.4rem;
+    }
+
+    @media (max-width: 40rem) {
+      width: 2rem;
+      padding: 0.25rem;
+    }
+  }
+
+  .DurationIcon {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 80rem) {
+    top: -3rem;
+  }
+
+  @media (max-width: 40rem) {
+    top: -2rem;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../../../../global";
+
+.servant-paper { 
+  @include flex-container($dir: column);
+  height: 14rem;
+  flex-grow: 1;
+  margin: 0 !important;
+  color: $secondary !important;
+  padding: 0.5rem !important;
+  //   padding-top: 0.25rem !important;
+
+  .servant-paper-header {
+    @include grid-template($gap: 0.25rem, $rows: repeat(2, auto));
+    width: 100%;
+    margin-bottom: 0.25rem;
+
+    .servant-paper-title {
+      margin: 0;
+      font-size: $md;
+      font-weight: bold;
+      color: $primary;
+    }
+  }
+
+  .servant-paper-main-divider {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .servant-paper-main {
+    @include flex-container($dir: column);
+    width: 100%;
+    flex-grow: 1;
+
+    .servant-paper-details {
+      width: 100%;
+      margin: 0.25rem 0;
+      margin-bottom: 1rem;
+      color: $secondary;
+      font-size: $sm;
+
+      .servant-paper-details-item {
+        @include flex-container($justify: space-between);
+        margin: 0.25rem 0;
+      }
+    }
+
+    .servant-paper-footer-btns-wrapper {
+      @include flex-container($justify: flex-end);
+      width: 100%;
+      margin-top: auto;
+
+      button {
+        width: 5rem;
+      }
+    }
+  }
+}

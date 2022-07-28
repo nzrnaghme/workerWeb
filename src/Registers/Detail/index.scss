@@ -1,0 +1,14 @@
+// Code Repetition Warning: It's just alike with the profile form.
+.req-details-paper {
+  margin-bottom: 1rem;
+  // Padding is getting repetitive.
+  padding: 2rem;
+
+  @media (max-width: 40rem) {
+    padding: 1rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,110 @@
+@import "../../global";
+
+$disabled: #e0e0e0;
+
+@mixin contained-style-maker($color) {
+  @extend .contained;
+  background-color: $color !important;
+
+  &:hover {
+    background-color: darken($color, 10%) !important;
+  }
+}
+
+@mixin outlined-style-maker($color) {
+  @extend .outlined;
+  color: $color !important;
+  border: 0.15rem solid $color !important;
+
+  &:hover {
+    color: darken($color, 10%) !important;
+    border: 0.15rem solid darken($color, 10%) !important;
+  }
+}
+
+.button {
+  box-sizing: border-box !important;
+  padding: 0rem !important;
+  font: inherit !important;
+  font-weight: bold !important;
+
+  .MuiButton-label:focus-visible {
+    outline: none;
+  }
+}
+
+.contained {
+  @extend .button;
+  color: white !important;
+}
+
+.contained-green {
+  @include contained-style-maker($success);
+}
+
+.contained-blue {
+  @include contained-style-maker($neutral);
+}
+
+.contained-orange {
+  @include contained-style-maker($warning);
+}
+
+.contained-red {
+  @include contained-style-maker($danger);
+}
+
+.contained-disabled {
+  @include contained-style-maker($disabled);
+  color: $secondary !important;
+  border: none;
+  box-shadow: none !important;
+}
+
+.outlined {
+  @extend .button;
+  background-color: transparent;
+}
+
+.outlined-green {
+  @include outlined-style-maker($success);
+}
+
+.outlined-blue {
+  @include outlined-style-maker($neutral);
+}
+
+.outlined-orange {
+  @include outlined-style-maker($warning);
+}
+
+.outlined-red {
+  @include outlined-style-maker($danger);
+}
+
+.outlined-disabled {
+  @include outlined-style-maker($disabled);
+  box-shadow: none !important;
+}
+
+.xs-btn {
+  @extend .button;
+  font-size: $xs !important;
+  width: 4rem;
+  height: 1.8rem;
+}
+
+.sm-btn {
+  @extend .button;
+  font-size: $xs !important;
+  width: 7rem;
+  //TODO: Should it be 2.5rem?
+  height: 2rem;
+}
+
+.lg-btn {
+  @extend .button;
+  font-size: $md !important;
+  width: 9rem;
+  height: 2.5rem;
+}

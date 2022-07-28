@@ -1,0 +1,29 @@
+@import "../../global";
+
+.complaints {
+  margin-bottom: 2rem;
+
+  .statics-title {
+    margin: {
+      top: 2rem;
+      bottom: 0.5rem;
+    }
+  }
+
+  .complaints-registry-steps {
+    @include grid-template($cols: repeat(2, 1fr));
+    margin-top: 3rem;
+
+    .complaints-subheading {
+      @include grid-template($gap: 0rem, $cols: repeat(2, 1fr));
+      align-items: center;
+
+      .statics-title {
+        margin: {
+          top: 0;
+          bottom: 1rem;
+        }
+      }
+    }
+  }
+}

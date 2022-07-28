@@ -1,0 +1,137 @@
+@import "../../global";
+
+.date-time-picker-container {
+  position: relative;
+  // height: 100%;
+  width: 100%;
+
+  .rmdp-container {
+    display: block !important;
+    height: 100% !important;
+  }
+
+  .date-time-picker-label {
+    color: rgba(0, 0, 0, 0.54);
+    background: white;
+    font-size: 0.7rem;
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    padding: 0 0.25rem;
+
+    &.err {
+      color: $danger;
+    }
+  }
+
+  .rmdp-input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    height: 2.5rem !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    padding: 10.5px 14px !important;
+    margin: 0 !important;
+    font: inherit !important;
+    border-color: rgba(0, 0, 0, 0.25) !important;
+
+    &.err {
+      border-color: $danger !important;
+    }
+
+    // To be in coordination with Mui textfields.
+    // @media (max-width: 400px) {
+    //   font-size: 0.75rem !important;
+    //   height: 35.25px !important;
+    // }
+  }
+
+  .rmdp-action-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rmdp-button {
+    font: inherit !important;
+    font-size: $md !important;
+    margin: 10px;
+    padding: 10px;
+    margin-right: 15px !important;
+  }
+
+  .clear-btn {
+    @include flex-container($fully-centered: true);
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+
+    .clear-btn-icon {
+      font-size: $lg;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}
+.clear-btn {
+  @include flex-container($fully-centered: true);
+  position: absolute !important;
+  top: 6.2rem;
+  left: 1.5rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  .clear-btn-icon {
+    font-size: $lg;
+    color: rgba(0, 0, 0, 0.54);
+  }
+}
+
+.date-picker {
+  position: relative;
+  .clear-btn-Date-Picker {
+    @include flex-container($fully-centered: true);
+    position: absolute !important;
+    top: 0.8rem;
+    left: 0.5rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    .clear-btn-icon {
+      font-size: $lg;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}
+
+.MuiPickersModal-dialogRoot {
+  width: 20rem !important;
+  .MuiDialogActions-root {
+    flex-direction: row-reverse !important;
+  }
+}
+
+.MuiPickersBasePicker-pickerView {
+  min-width: 0px !important;
+}
+
+.MuiPickersToolbar-toolbar {
+  height: 60px !important;
+}
+
+.MuiPickersDatePickerRoot-toolbar {
+  align-items: center;
+  button span h6 {
+    font-size: 2rem;
+  }
+}
+
+.MuiPickersDatePickerRoot-toolbar button span h4 {
+  display: none !important;
+}

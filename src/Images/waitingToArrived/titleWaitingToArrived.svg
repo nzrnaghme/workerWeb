@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="453.64" height="134" viewBox="0 0 453.64 134">
+  <defs>
+    <filter id="Union_6" x="0" y="0" width="453.64" height="134" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_221" data-name="Group 221" transform="translate(-8097.361 -3718)">
+    <g transform="matrix(1, 0, 0, 1, 8097.36, 3718)" filter="url(#Union_6)">
+      <path id="Union_6-2" data-name="Union 6" d="M55.717,104H53.871L1.58,55.535a4.746,4.746,0,0,1,0-7.071L53.87,0H410.639a13,13,0,0,1,13,13V91a13,13,0,0,1-13,13Z" transform="translate(15 15)" fill="#fff"/>
+    </g>
+    <text id="انتظار_تا_رسیدن" data-name="انتظار تا رسیدن" transform="translate(8445 3796)" fill="#1665c7" font-size="45" font-family="BYekan, B Yekan"><tspan x="-260.354" y="0">انتظار تا رسیدن</tspan></text>
+    <path id="Path_204" data-name="Path 204" d="M8437.151,3768.8v33.143" transform="translate(20)" fill="none" stroke="rgba(70,105,148,0.49)" stroke-width="1"/>
+    <g id="_7100206_paper_file_document_resume_receipt_icon" data-name="7100206_paper_file_document_resume_receipt_icon" transform="translate(8437.9 3727.48)">
+      <path id="Path_205" data-name="Path 205" d="M63.7,40.52H40.143a3.342,3.342,0,0,0-3.319,3H31.579A.479.479,0,0,0,31.1,44V64.028a3.341,3.341,0,0,0,3.337,3.336h8.079v7.1a.479.479,0,0,0,.479.479H66.553a.479.479,0,0,0,.479-.479V43.857A3.341,3.341,0,0,0,63.7,40.52ZM32.063,64.028V44.485h4.744V64.028a2.372,2.372,0,1,1-4.745,0ZM36.777,66.4a3.327,3.327,0,0,0,.994-2.373V43.857a2.373,2.373,0,1,1,4.745,0V66.4Zm29.294,7.583H43.479V43.857a3.324,3.324,0,0,0-.994-2.373H63.7a2.376,2.376,0,0,1,2.373,2.373Z" transform="translate(0 0)" fill="#0f4b95"/>
+      <path id="Path_206" data-name="Path 206" d="M239.649,130.62h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -82.902)" fill="#0f4b95"/>
+      <path id="Path_207" data-name="Path 207" d="M239.649,184.19h-16.2a.482.482,0,0,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -132.193)" fill="#0f4b95"/>
+      <path id="Path_208" data-name="Path 208" d="M239.649,237.76h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -181.483)" fill="#0f4b95"/>
+      <path id="Path_209" data-name="Path 209" d="M239.649,291.34h-16.2a.482.482,0,1,0,0,.963h16.2a.482.482,0,1,0,0-.963Z" transform="translate(-176.542 -230.783)" fill="#0f4b95"/>
+      <path id="Path_210" data-name="Path 210" d="M234.016,344.92H223.443a.482.482,0,1,0,0,.965h10.574a.482.482,0,0,0,0-.963Z" transform="translate(-176.533 -280.083)" fill="#0f4b95"/>
+    </g>
+  </g>
+</svg>

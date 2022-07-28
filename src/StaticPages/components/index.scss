@@ -1,0 +1,40 @@
+@import "../../global";
+
+// TODO: Identical with those used in Home Page.
+.statics-title {
+  color: $brand-color;
+  font: {
+    weight: bold;
+    size: $xlg;
+  }
+
+  // @media (max-width: 60rem) {
+  //   font-size: $md;
+  // }
+}
+
+.statics-paragraph {
+  font-size: $lg;
+  color: $primary;
+  text-align: justify;
+
+  // @media (max-width: 60rem) {
+  //   font-size: $sm;
+  // }
+}
+
+.steps-num-wrapper {
+  position: relative;
+
+  .steps-num {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    font: {
+      size: 5rem;
+      weight: bold;
+    }
+    color: $brand-color;
+    opacity: 0.15;
+  }
+}

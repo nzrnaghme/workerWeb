@@ -1,0 +1,18 @@
+@import "../../global";
+
+.navigation {
+  color: #86a6b2;
+  margin: 0 0.25rem;
+  font: {
+    size: $xlg;
+    weight: bold;
+  }
+
+  @media (max-width: 40rem) {
+    font-size: $sm;
+  }
+
+  // @media (max-width: 25rem) {
+  //   font-size: $xs;
+  // }
+}

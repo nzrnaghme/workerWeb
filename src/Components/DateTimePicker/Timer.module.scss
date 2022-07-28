@@ -1,0 +1,49 @@
+@use "sass:math";
+
+$ringSize: 120px;
+$ballSize: $ringSize * 0.1;
+$blueColor: #1c97d7;
+$greenColor: #00aa1c;
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: $blueColor;
+}
+
+.ring {
+  position: relative;
+  width: $ringSize;
+  height: $ringSize;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid $blueColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ball {
+    position: absolute;
+    top: 54px;
+    right: 54px;
+    width: $ballSize;
+    height: $ballSize;
+    border-radius: 50%;
+    background: #00aa1c;
+    transform: translateY(-1 * (math.div($ringSize, 2)));
+    animation: spin 60s linear;
+    animation-iteration-count: 1;
+    transform: rotate(0deg) translateY(-1 * (math.div($ringSize, 2)));
+  }
+}
+
+@keyframes spin {
+  // 0% {
+  //   transform: rotate(0deg) translateY(-1 * (math.div($ringSize, 2)));
+  // }
+  100% {
+    transform: rotate(360deg) translateY(-1 * (math.div($ringSize, 2)));
+  }
+}

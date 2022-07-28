@@ -1,0 +1,16 @@
+@import "../../global";
+
+.switch-wrapper {
+  text-align: center;
+
+  label {
+    font-size: $md;
+    display: inline-block;
+    width: 4.5rem;
+    color: $secondary;
+
+    &.switch-label-active {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../global";
+
+.textfield-helper-text {
+  font-size: $xs;
+}
+
+.textfield-helper-hint {
+  @extend .textfield-helper-text;
+  color: $secondary;
+}
+
+.textfield-helper-err {
+  @extend .textfield-helper-text;
+  color: $danger;
+}
+
+textarea {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.4rem !important;
+
+    @media (max-width: 40rem) {
+      width: 0.25rem !important;
+    }
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: white !important;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $secondary !important;
+    border-radius: 0.2rem;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $primary !important;
+  }
+}
+
+.MuiInputBase-input.Mui-disabled {
+  color: #170d0dd4 !important;
+}

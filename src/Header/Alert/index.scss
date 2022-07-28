@@ -1,0 +1,20 @@
+@import "../../global";
+
+.notification-badge {
+  cursor: pointer;
+
+  .MuiBadge-badge {
+    width: 2.2rem !important;
+    height: 1rem !important;
+  }
+
+  .header-bell {
+    font-size: $xxxlg;
+    color: $danger;
+  }
+}
+
+.header-bell-none-notif {
+  font-size: $xxxlg;
+  color: $secondary;
+}

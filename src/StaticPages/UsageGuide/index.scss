@@ -1,0 +1,30 @@
+@import "../../global";
+
+.usage-guide {
+  .statics-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .usage-guide-heading {
+    margin: 2rem 0;
+  }
+
+  .usage-guide-img-wrapper {
+    text-align: center;
+    img {
+      width: 70%;
+    }
+  }
+
+  .usage-guide-subheading {
+    margin-top: 3rem;
+
+    &:first-of-type {
+      margin-top: 2rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 3rem;
+    }
+  }
+}

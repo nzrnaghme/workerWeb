@@ -1,0 +1,209 @@
+@import "../global";
+
+.personal-card-paper {
+  .MuiDialog-paper {
+    width: 40rem !important;
+    padding: 0; //Ask about this one
+  }
+
+  @media (max-width: 40rem) {
+    .MuiDialogContent-root {
+      overflow-y: scroll;
+    }
+  }
+
+  .p-c-upper-section {
+    // Potential future mixin
+    .text-content {
+      font-size: $sm;
+      color: $secondary;
+
+      @media (max-width: 40rem) {
+        font-size: $xs;
+      }
+
+      label {
+        box-sizing: border-box;
+        padding-left: 0.25rem;
+      }
+
+      .text {
+        display: inline;
+        color: darken($secondary, 15%);
+      }
+    }
+
+    .p-c-details-score-star {
+      @include flex-container($align: flex-end, $justify: flex-end);
+
+      @media (max-width: 40rem) {
+        align-items: flex-start;
+      }
+
+      .p-c-details-score-num {
+        font-size: $md;
+        color: $neutral;
+        margin-left: 0.25rem;
+        direction: ltr;
+      }
+    }
+
+    .comments-display-btn {
+      @include flex-container($align: center, $justify: center);
+      margin-top: auto;
+      font-size: $md;
+      color: $neutral;
+      cursor: pointer;
+
+      p {
+        margin: 0;
+      }
+
+      &:hover {
+        color: darken($neutral, 10%);
+      }
+
+      .comments-label-icon {
+        margin-right: 0.25rem;
+      }
+
+      @media (max-width: 40rem) {
+        cursor: default;
+        font-size: $xs;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .p-c-avatar-about {
+      padding: 1rem;
+      @include flex-container(
+        $dir: column,
+        $align: center,
+        $justify: space-around
+      );
+      width: 100%;
+      box-sizing: border-box;
+
+      @media (max-width: 40rem) {
+        @include grid-template($cols: auto auto);
+        align-items: flex-start;
+      }
+
+      .p-c-avatar-name {
+        @include flex-container($dir: column, $align: center);
+      }
+
+      .lg-avatar {
+        width: 6.5rem !important;
+        height: 6.5rem !important;
+
+        @media (max-width: 40rem) {
+          width: 5.5rem !important;
+          height: 5.5rem !important;
+        }
+      }
+
+      .p-c-username {
+        margin: 0.5rem 0 0 0;
+        font-size: $md;
+        color: $primary;
+
+        @media (max-width: 40rem) {
+          font-size: $sm;
+        }
+      }
+
+      .p-c-about {
+        @extend .text-content;
+    text-align: justify !important;
+        white-space: unset; //For Firefox
+        margin-top: 0.5rem;
+
+        @media (max-width: 40rem) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &.desktop {
+      @include grid-template($cols: 1.1fr 1.9fr, $gap: 0);
+
+      .p-c-avatar-about {
+        border-left: 1px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    &.mobile {
+      .p-c-avatar-about {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .p-c-details {
+      @include grid-template($rows: auto auto auto, $gap: 0);
+
+      .p-c-details-item {
+        padding: 1rem;
+        height: fit-content;
+      }
+
+      .p-c-details-item1,
+      .p-c-details-item2 {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .p-c-details-item1 {
+        @extend .p-c-details-item;
+
+        .p-c-details-sexuality-disability-wrapper {
+          @include grid-template($cols: auto auto, $gap: 1.5rem);
+
+          margin-top: 0.5rem;
+
+          @media (max-width: 40rem) {
+            margin: 0;
+          }
+
+          .p-c-details-sexuality {
+            @extend .text-content;
+            justify-self: flex-start;
+          }
+
+          .p-c-details-disability {
+            @extend .text-content;
+            justify-self: flex-end;
+          }
+        }
+      }
+
+      .p-c-details-item2 {
+        @extend .p-c-details-item;
+      }
+
+      .p-c-details-item2-servant {
+        @extend .p-c-details-item2;
+        @include grid-template($cols: repeat(3, 1fr), $gap: 0);
+        justify-items: center;
+      }
+
+      .p-c-details-item2-client {
+        @extend .p-c-details-item2;
+        text-align: center;
+      }
+
+      .p-c-details-item3 {
+        @extend .p-c-details-item;
+
+        .score-item {
+          margin-left: 0;
+          width: fit-content;
+        }
+        .numeric-scores-wrapper {
+          @include grid-template($cols: repeat(3, 1fr), $gap: 0);
+          justify-items: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

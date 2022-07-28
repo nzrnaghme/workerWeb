@@ -1,0 +1,143 @@
+@import "../../global";
+
+.upsert-header-btns-wrapper {
+  @include flex-container($justify: flex-end, $align: center);
+  margin: {
+    bottom: 0.5rem;
+    right: auto;
+  }
+
+  // Could be a mixin. Had a same one in W8ing.
+  .upsert-header-btn {
+    width: 1.8rem;
+
+    @media (max-width: 40rem) {
+      width: 1.5rem;
+    }
+  }
+}
+
+//TODO: Just like Profile papers.
+.upsert-paper {
+  padding: 2rem;
+
+  @media (max-width: 40rem) {
+    padding: 1rem;
+
+    min-height: calc(100vh - 12.5rem);
+    display: flex;
+  }
+}
+
+.upsert-form {
+  @include flex-container($dir: column);
+  width: 100%;
+
+  @media (max-width: 40rem) {
+    justify-content: space-between;
+  }
+
+  .upsert-form-data-wrapper {
+    width: 100%;
+
+    .upsert-fields-grid-container {
+      @include grid-container();
+      grid-template-areas:
+        "item-1"
+        "item-2";
+
+      .upsert-fields-grid-item-1 {
+        grid-area: item-1;
+      }
+
+      .upsert-fields-grid-item-2 {
+        grid-area: item-2;
+      }
+    }
+
+    .upsert-request-details-wrapper {
+      @include grid-template($cols: repeat(2, 1fr));
+      margin-top: 1rem;
+
+      .upsert-request-details-item {
+        @include flex-container(
+          $align: center,
+          $justify: space-around,
+          $dir: column
+        );
+        width: 100%;
+        height: 6rem;
+        border: 1px solid rgba(0, 0, 0, 0.23);
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        box-sizing: border-box;
+
+        &:last-of-type {
+          div {
+            @include flex-container($justify: space-between);
+            width: 100%;
+            font-size: $md !important;
+
+            label {
+              color: $primary;
+            }
+
+            span {
+              font-size: $sm;
+            }
+          }
+          color: $secondary;
+        }
+      }
+
+      @media (max-width: 40rem) {
+        @include grid-template($cols: 1fr, $rows: repeat(2, 1fr));
+      }
+
+      .upsert-switch-wrapper {
+        text-align: center;
+
+        .upsert-switch-label {
+          font-size: $md;
+          display: inline-block;
+          width: 4.5rem;
+        }
+
+        .upsert-switch-label-off {
+          @extend .upsert-switch-label;
+          color: $secondary;
+        }
+
+        .upsert-switch-label-on {
+          @extend .upsert-switch-label;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .upsert-btns-grid-container {
+    @include grid-container();
+
+    width: 100%; // Overwrote the parent's width so that btns' global styles stay intact.
+    grid-template-areas: "item-1 item-2";
+    margin-top: 2rem;
+
+    .upsert-btn-grid-item-1 {
+      grid-area: item-1;
+      justify-self: flex-end;
+    }
+
+    .upsert-btn-grid-item-2 {
+      grid-area: item-2;
+    }
+
+    //TODO: Code duplication
+    @media (max-width: 40rem) {
+      button {
+        width: 100%;
+        height: 2.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../global";
+
+@mixin vote-border($color) {
+  border: 1px solid $color;
+  border-radius: 0.5rem;
+}
+
+.survey-param {
+  @include flex-container($dir: column, $align: center);
+
+  .survey-param-icon-wrapper {
+    @include flex-container($fully-centered: true);
+    @include circle-maker($size: 5rem, $bg: #e7efff);
+
+    @media (max-width: 40rem) {
+      @include circle-maker($size: 3.5rem, $bg: #e7efff);
+    }
+
+    .survey-param-icon {
+      width: 70%; // A bit of cheating on our rules.
+    }
+  }
+
+  .survey-param-title {
+    margin: 0.5rem 0;
+    color: $primary;
+    font-size: $md;
+
+    @media (max-width: 40rem) {
+      margin: 0.25rem 0;
+      font-size: $xs;
+    }
+  }
+
+  .p-c-survey-param-vote-wrapper {
+    @include grid-template($cols: repeat(2, 1fr), $gap: 1.5rem);
+    justify-items: center;
+    color: $secondary;
+    font-size: $md;
+
+    @media (max-width: 40rem) {
+      gap: 1rem;
+      font-size: $xs;
+    }
+
+    .survey-param-vote-item {
+      @include flex-container($dir: column, $align: center);
+
+      span {
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}

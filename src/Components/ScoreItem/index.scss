@@ -1,0 +1,72 @@
+@import "../../global";
+
+.score-item {
+  @include grid-template($gap: 0.25rem, $cols: 2.25rem auto);
+  margin-left: 1rem;
+  width: 7.5rem;
+
+  @media (max-width: 60rem) {
+    width: 7rem;
+  }
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1.5rem auto;
+    width: 5rem;
+    margin-left: 0.5rem;
+  }
+
+  .score-item-data {
+    p {
+      color: $secondary;
+      font-size: $sm;
+      margin: 0;
+
+      @media (max-width: 40rem) {
+        font-size: $xxxs;
+      }
+    }
+
+    .numeric-score-item-data-num {
+      font-size: $md;
+
+      @media (max-width: 40rem) {
+        font-size: $xxs;
+      }
+    }
+
+    .numeric-score-item-data-num-green {
+      @extend .numeric-score-item-data-num;
+      color: $success;
+    }
+
+    .numeric-score-item-data-num-orange {
+      @extend .numeric-score-item-data-num;
+      color: $warning;
+    }
+
+    .numeric-score-item-data-num-red {
+      @extend .numeric-score-item-data-num;
+      color: $danger;
+    }
+
+    .score-item-like-dislike {
+      @include flex-container($justify: space-between);
+      min-width: 4rem;
+      color: $secondary;
+      font-size: $md;
+
+      @media (max-width: 40rem) {
+        font-size: $xxs;
+        min-width: 3rem;
+      }
+
+      .score-item-like-num {
+        color: $neutral;
+      }
+
+      .score-item-dislike-num {
+        color: $danger;
+      }
+    }
+  }
+}

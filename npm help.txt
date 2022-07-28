@@ -1,0 +1,120 @@
+yarn create react-app yootaab --template typescript
+yarn add web-vitals
+yarn add typescript
+yarn add @types/react --save-dev 
+yarn add @types/react-dom --save-dev 
+
+RTL
+yarn add jss-rtl
+
+Routers
+yarn add react-router-dom
+
+Cookie 
+yarn add react-cookie
+
+http server
+yarn add react-toastify
+yarn add axios
+
+ssas
+npm install -g sass
+npm i react-scripts --save
+
+styled-components
+npm install --save @types/styled-components
+npm i styled-components
+
+search DropDown
+yarn add @material-ui/lab
+
+icons
+yarn add @fortawesome/react-fontawesome
+
+sass
+npm i node-sass
+
+formik
+npm i formik yup
+
+momento
+npm i moment
+
+cookie
+npm install react-cookie
+
+map
+npm i mapir-react-component
+npm i react-cookie
+
+signalR 
+npm i @microsoft/signalr
+
+jwt-decode
+npm i jwt-decode
+
+persian-tools
+yarn add @persian-tools/persian-tools
+
+loader end list
+npm i react-bottom-scroll-listener
+
+lazyload
+npm i react-lazyload
+
+classnames
+npm i classnames
+
+Date & Time picker
+npm i react-multi-date-picker
+
+Alert
+npm install @mui/material @emotion/react @emotion/styled
+
+icon 
+npm install @mui/icons-material
+
+animate css
+npm install --save animate.min.css
+yarn add animate.css
+
+Simple scroll bar
+npm install simplebar-react --save
+
+Currency TexFiled
+yarn add @unicef/material-ui-currency-textfield --save --force
+dddd
+
+new time
+npm install --save react-timekeeper
+
+timer 
+yarn add react-countdown-circle-timer
+
+full-screen
+yarn add react-full-screen
+
+material-ui-popup-state
+yarn add material-ui-popup-state
+
+material-ui-audio-player
+npm i material-ui-audio-player
+
+infinite-scroll
+npm install --save react-infinite-scroll-component
+
+@types/moment-jalaali
+npm i --save-dev @types/moment-jalaali
+
+animate
+npm install animejs --save
+
+react-device-detect
+npm install react-device-detect --save
+
+
+promis tracker
+npm install react-promise-tracker --save
+
+spinner loading
+npm i react-loading

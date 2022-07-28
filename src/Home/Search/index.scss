@@ -1,0 +1,78 @@
+@import "../../global";
+
+.search-container {
+  margin-top: 2rem;
+  display: flex;
+
+  .search-fields-wrapper {
+    @include grid-template($cols: repeat(3, 1fr), $gap: 0);
+    flex-grow: 1;
+
+    .MuiInputBase-root {
+      outline: none !important;
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+      border-color: rgba(0, 0, 0, 0.23) !important;
+    }
+
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-width: 1px !important;
+    }
+
+    .MuiFormLabel-root.Mui-focused {
+      color: rgba(0, 0, 0, 0.54) !important;
+    }
+
+    fieldset {
+      border-radius: 0 !important;
+
+      &:focus-visible {
+        outline: none !important;
+      }
+    }
+
+    .search-field {
+      fieldset {
+        border-radius: 0 0.25rem 0.25rem 0 !important;
+      }
+    }
+
+    .combo-field {
+      fieldset {
+        border-right: 0 !important;
+      }
+    }
+  }
+
+  .search-button {
+    @include flex-container($justify: center, $align: center);
+    background: $secondary;
+    border-radius: 0.25rem 0 0 0.25rem;
+    border-right: 0;
+    width: 9rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    height: 3.5rem; //Like Mui's fields.
+    box-sizing: border-box;
+    font: inherit;
+    font-size: $xlg;
+
+    &:hover {
+      background: $neutral;
+    }
+
+    &:focus-visible {
+      outline: none !important;
+    }
+
+    #search-icon {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.mobile-search-fields {
+  @include grid-template($rows: repeat(3, 1fr));
+}

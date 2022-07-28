@@ -1,0 +1,37 @@
+@import "../../global";
+
+.reqs-category-container {
+  margin-top: 3rem;
+
+  .reqs-category-title {
+    @include flex-container($align: center);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    width: fit-content;
+
+    &:hover {
+      color: $brand-color;
+    }
+
+    .reqs-category-fake-icon {
+      width: 4rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .reqs-category-title-emergent {
+    @extend .reqs-category-title;
+    // color: $danger;
+    color: #ef413d;
+  }
+  .reqs-category-title-suggested {
+    @extend .reqs-category-title;
+    // color: $success;
+    color: #1f9b90;
+  }
+  .reqs-category-title-daily {
+    @extend .reqs-category-title;
+    // color: $warning;
+    color: #ffc20e;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../global";
+
+.transactions-serach-paper {
+  margin-bottom: 1rem;
+
+  .transactions-serach-components {
+    @include grid-template($cols: 1fr 1fr auto);
+
+    @media (max-width: 40rem) {
+      @include grid-template($cols: 1fr, $rows: repeat(3, auto));
+
+      .lg-btn {
+        width: 100% !important;
+      }
+    }
+  }
+}

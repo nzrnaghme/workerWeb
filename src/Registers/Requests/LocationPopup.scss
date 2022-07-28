@@ -1,0 +1,13 @@
+@import "../../global";
+
+.upsert-location-hint {
+  color: $secondary;
+  font-size: $md;
+  margin: 0;
+  margin-bottom: 1rem;
+
+  @media (max-width: 40rem) {
+    margin-bottom: 0.5rem;
+    font-size: $sm;
+  }
+}

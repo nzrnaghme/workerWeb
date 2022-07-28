@@ -1,0 +1,11 @@
+@import "../../global";
+
+$score-color: #1c97d7;
+
+.score-number {
+  @include flex-container($fully-centered: true);
+  @include circle-maker($size: 1.5rem, $bordered: true, $color: $score-color);
+  font-size: $xxs;
+  font-weight: bold;
+  color: $score-color;
+}

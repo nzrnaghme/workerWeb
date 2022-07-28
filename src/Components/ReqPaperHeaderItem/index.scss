@@ -1,0 +1,17 @@
+@import "../../global";
+
+.req-paper-header-item {
+  @include flex-container($align: center);
+  font-size: $xxs;
+  margin-right: 0.7rem;
+  color: $primary !important;
+
+  .req-paper-verical-divider {
+    height: 1.25rem;
+    margin: 0 0.25rem;
+  }
+
+  .req-paper-date-time {
+    // @include flex-container($dir: column, $align: flex-end);
+  }
+}

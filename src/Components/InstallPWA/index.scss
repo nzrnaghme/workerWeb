@@ -1,0 +1,69 @@
+.pop-up-install-pwa {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .ios-saffari-title-pwa {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .seccond-text {
+      margin-top: 1rem;
+    }
+
+    .ios-saffari-share {
+      display: flex;
+      flex-direction: row;
+      .btn-add {
+        margin-top: 10px;
+      }
+      .icon-btn-add {
+        color: #268dee;
+        margin-right: 5px;
+        font-weight: bolder;
+        margin-left: 1rem;
+      }
+      .share-icon {
+        margin-right: 6px;
+        width: 9%;
+        height: 9%;
+      }
+      img {
+        width: 10%;
+        height: 10%;
+        margin-top: 5px;
+        margin-right: 5px;
+        pointer-events: none;
+        user-select: none;
+        margin-left: 1rem;
+      }
+      p {
+        pointer-events: none;
+        user-select: none;
+        font-size: small;
+      }
+    }
+  }
+  .chrome-title-pwa {
+    margin-top: 30%;
+    text-align: center;
+  }
+  .btn-pwa {
+    width: 90% !important;
+    height: 2.5rem !important;
+    position: absolute;
+    bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.all-form-pop-up-install-pwa {
+  .MuiDialog-paper {
+    border-radius: 1rem;
+    background: #dbebf1;
+    min-width: 0px !important;
+    height: 18rem;
+    width: 18rem;
+  }
+}

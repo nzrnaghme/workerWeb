@@ -1,0 +1,460 @@
+@import "./global";
+
+.App {
+  min-height: 100vh;
+  min-width: 20rem;
+  position: relative;
+  //TODO:
+  background: lighten($pale-gray, 4%);
+  cursor: default;
+  // TODO: Do sth if it causes any issues
+  word-break: break-word;
+  @include disable-user-select();
+
+  .root-container {
+    padding: 1rem !important;
+    padding-bottom: 17rem !important;
+
+    @media (max-width: 40rem) {
+      background: lighten($pale-gray, 4%);
+      padding: {
+        top: 5rem !important;
+        bottom: 5rem !important;
+      }
+    }
+
+    &.mobile-root-container-home {
+      @media (max-width: 40rem) {
+        padding-bottom: 1rem !important;
+        padding-top: 0.8rem;
+      }
+    }
+
+    .MuiInputBase-input.Mui-disabled {
+      color: #170d0dd4 !important;
+    }
+
+    .filters-and-reqs-grid-wrapper {
+      @include grid-template($cols: 14rem 1fr);
+
+      @media (max-width: 60rem) {
+        @include grid-template($cols: 1fr);
+      }
+    }
+
+    .reqs-grid-container {
+      @include grid-template($cols: repeat(3, 1fr));
+      height: fit-content;
+
+      @media (max-width: 80rem) {
+        @include grid-template($cols: repeat(2, 1fr));
+      }
+
+      @media (max-width: 40rem) {
+        @include grid-template($cols: 1fr);
+      }
+    }
+
+    .reqs-filterless-grid-container {
+      @include grid-template($cols: repeat(3, 1fr));
+
+      @media (max-width: 60rem) {
+        @include grid-template($cols: repeat(2, 1fr));
+      }
+
+      @media (max-width: 40rem) {
+        @include grid-template($cols: 1fr);
+      }
+    }
+
+    .load-more-reqs-btn {
+      text-align: center;
+      margin-top: 2rem;
+
+      @media (max-width: 40rem) {
+        margin-top: 1rem;
+      }
+    }
+
+    .chat-papers-grid-container {
+      @include grid-template($cols: repeat(2, 1fr));
+
+      @media (max-width: 40rem) {
+        @include grid-template($rows: auto 1fr, $cols: 1fr);
+      }
+
+      .chat-complementary-paper {
+        height: 30rem;
+
+        @media (max-width: 40rem) {
+          height: fit-content;
+        }
+      }
+
+      .chat-fulldialog-btn {
+        height: 2.5rem;
+        position: fixed;
+        bottom: 5rem;
+        right: 1rem;
+        width: calc(100vw - 2rem);
+        border-radius: 1.5rem;
+        color: $primary !important;
+        text-align: right !important;
+        background: $pale-gray !important;
+
+        .MuiButton-label {
+          justify-content: flex-start;
+          margin-right: 1.5rem;
+        }
+
+        // &:hover {
+        //   background: $secondary !important;
+        // }
+      }
+
+      // .req-confirm-paper {
+      //   padding: 2rem; //TODO:This should later become an uniform standard on papers.
+
+      //   @media (max-width: 40rem) {
+      //     padding: 1rem;
+      //   }
+      // }
+    }
+  }
+
+  //TODO: Later to be written like date's popup.
+  .popup-btns-grid-wrapper {
+    @include grid-container($gap: 1rem);
+    grid-template-areas: "item-1 item-2";
+    margin-top: 2rem;
+    margin-bottom: 0.25rem; // In order to the first textfield's active label doesn't disappear.
+
+    .popup-btns-grid-item-1 {
+      grid-area: item-1;
+      justify-self: flex-end;
+    }
+
+    .popup-btns-grid-item-2 {
+      grid-area: item-2;
+    }
+  }
+
+  .helper-text {
+    font-size: $xs;
+  }
+
+  .helper-hint {
+    @extend .helper-text;
+    color: $secondary;
+  }
+
+  .helper-err {
+    @extend .helper-text;
+    color: $danger;
+  }
+}
+
+p {
+  word-break: break-word;
+  margin: 0; //TODO: Later delete other assignments, application wide.
+}
+
+img {
+  width: 100%;
+}
+.link-img-btn-wrapper {
+  width: 100%;
+}
+
+.text-active {
+  cursor: pointer;
+
+  &:hover {
+    color: $primary !important;
+  }
+
+  @media (max-width: 40rem) {
+    cursor: default;
+  }
+}
+
+// .fullscreen {
+//   position: relative;
+//   top: 0;
+//   right: 0;
+//   z-index: 10e10;
+//   position: relative;
+
+//   .mapboxgl-ctrl-group:not(:empty) {
+//   }
+
+//   .map-btn {
+//     position: absolute;
+//     z-index: 1;
+//     height: 29px;
+//     box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 10%);
+//     background: white;
+//     border-radius: 0.25rem;
+//     border: none;
+//     cursor: pointer;
+
+//     &:hover {
+//       background: darken(white, 8%);
+//     }
+//   }
+
+//   .fullscreen-btn {
+//     @extend .map-btn;
+//     right: 10px;
+//     width: 29px;
+//   }
+
+//   .single-fullscreen-btn {
+//     @extend .fullscreen-btn;
+//     top: 10px;
+//   }
+
+//   .coupled-fullscreen-btn {
+//     @extend .fullscreen-btn;
+//     top: 49px;
+//   }
+
+//   .map-coords-remove-btn {
+//     @extend .map-btn;
+//     top: 10px;
+//     left: 10px;
+//     font: inherit;
+//     font: {
+//       size: $sm;
+//       weight: bold;
+//     }
+//     color: $primary;
+//   }
+// }
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10e10;
+  width: 100vw;
+  height: 100vh;
+
+  #map {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
+
+#map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .map-btn {
+    position: absolute;
+    z-index: 1;
+    height: 29px;
+    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 10%);
+    background: white;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: darken(white, 8%);
+    }
+  }
+
+  .fullscreen-btn {
+    @extend .map-btn;
+    right: 10px;
+    width: 29px;
+  }
+
+  .single-fullscreen-btn {
+    @extend .fullscreen-btn;
+    top: 10px;
+  }
+
+  .coupled-fullscreen-btn {
+    @extend .fullscreen-btn;
+    top: 49px;
+  }
+
+  .map-coords-remove-btn {
+    @extend .map-btn;
+    top: 10px;
+    left: 10px;
+    font: inherit;
+    font: {
+      size: $sm;
+      weight: bold;
+    }
+    color: $primary;
+  }
+}
+
+.location-popup {
+  .MuiDialog-paper {
+    width: 40rem !important; //TODO: Seems it's a duplication, revise later.
+  }
+
+  .MuiInputBase-input.Mui-disabled {
+    color: #170d0dd4 !important;
+  }
+
+  .location-grid-wrapper {
+    @include grid-container();
+    grid-template-areas:
+      "item1 item1"
+      "item2 item3";
+
+    @media (max-width: 40rem) {
+      gap: 0.5rem;
+      grid-template-areas:
+        "item1 item1"
+        "item2 item2"
+        "item3 item3";
+    }
+
+    margin: {
+      top: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+      bottom: 1rem;
+    }
+
+    @media (max-width: 40rem) {
+      margin-bottom: 0.5rem;
+    }
+
+    .location-grid-item1 {
+      grid-area: item1;
+    }
+    .location-grid-item2 {
+      grid-area: item2;
+    }
+    .location-grid-item3 {
+      grid-area: item3;
+    }
+  }
+
+  .location-map-wrapper {
+    margin-bottom: 2rem;
+
+    @media (max-width: 40rem) {
+      margin-bottom: 1rem;
+    }
+
+    #map {
+      height: 20rem;
+
+      @media (max-width: 40rem) {
+        height: 10rem;
+      }
+    }
+  }
+}
+
+.location-btns-wrapper {
+  text-align: center;
+  margin-bottom: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+
+  @media (max-width: 40rem) {
+    @include grid-template($cols: repeat(2, 1fr));
+
+    &.location-single-btn-wrapper {
+      display: block;
+    }
+  }
+
+  .xs-btn {
+    width: 100%;
+    height: 2.5rem; //Avoid code duplication.
+  }
+
+  .location-back-btn {
+    margin-right: 1rem;
+
+    @media (max-width: 40rem) {
+      margin-right: 0;
+    }
+  }
+}
+
+.dates-popup {
+  .dates-wrapper {
+    @include grid-template($rows: repeat(2, 1fr));
+    width: 100%;
+    margin-top: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+
+    @media (max-width: 40rem) {
+      gap: 0.5rem;
+    }
+
+    .MuiInputBase-input.Mui-disabled {
+      color: #170d0dd4 !important;
+    }
+  }
+
+  //TODO: This could become global popup btns wrapper
+  .dates-btns-wrapper {
+    text-align: center;
+    margin: {
+      bottom: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+      top: 2rem;
+    }
+
+    @media (max-width: 40rem) {
+      margin-top: 1rem;
+
+      @include grid-template($cols: repeat(2, 1fr));
+
+      &.dates-single-btn-wrapper {
+        display: block;
+      }
+
+      .xs-btn {
+        width: 100%;
+        height: 2.5rem; //TODO: Code repeatition
+      }
+    }
+  }
+}
+
+// Popper and popover corrections
+.MuiAutocomplete-popper {
+  direction: rtl !important;
+}
+
+.MuiPopover-paper {
+  direction: rtl !important;
+
+  .MuiMenu-list {
+    width: 100% !important;
+  }
+}
+
+.MuiFormHelperText-contained {
+  margin: {
+    right: 0 !important;
+    left: 0 !important;
+  }
+}
+
+.Toastify {
+  div {
+    font: inherit !important;
+    color: $secondary !important;
+    text-align: justify !important;
+    white-space: unset; //For Firefox
+    font-size: $md !important;
+
+    @media (max-width: 40rem) {
+      font-size: $sm !important;
+    }
+  }
+}
+
+.mapboxgl-ctrl {
+  height: 29px !important;
+}

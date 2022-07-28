@@ -1,0 +1,72 @@
+@import "../../../global";
+
+.details-time-grid-container {
+  @include grid-container();
+  grid-template-areas:
+    "item1 item2"
+    "item3 item4"
+    "item5 item5";
+
+  .details-time-grid-item1 {
+    grid-area: item1;
+  }
+
+  .details-time-grid-item2 {
+    grid-area: item2;
+  }
+
+  .details-time-grid-item3 {
+    grid-area: item3;
+  }
+
+  .details-time-grid-item4 {
+    grid-area: item4;
+
+    textarea {
+    text-align: justify !important;
+      white-space: unset; //For Firefox
+    }
+  }
+
+  .details-time-grid-item5 {
+    grid-area: item5;
+  }
+
+  // TODO: Thes same as the one in the Request Confirm attachments popup (code duplication).
+  .details-time-attachments-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+    direction: ltr;
+    margin-top: 0.4rem; //Cause Mui's label of textfield disappeared partially.
+
+    .details-time-attachments-heading {
+      font-size: $xs;
+      margin: 0;
+      position: absolute;
+      top: -10px;
+      right: 8px;
+      background: white;
+      color: $secondary;
+      padding: 0 0.25rem;
+    }
+
+    //TODO: Temporarily added.
+    span {
+      display: inline-block;
+      height: 2rem;
+
+      button {
+        height: 100%;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

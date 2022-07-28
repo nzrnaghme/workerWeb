@@ -1,0 +1,50 @@
+@import "../../../../../../global";
+
+.profile-comments-popup {
+  .MuiDialog-paper {
+    width: 40rem !important;
+  }
+
+  .profile-comments-popup-close-btn {
+    position: absolute;
+    top: 8px;
+    left: 11px;
+    font-size: 1.5rem;
+    color: $secondary;
+
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+
+      @media (max-width: 40rem) {
+        cursor: default;
+      }
+    }
+  }
+
+  .profile-comments-popup-title {
+    color: $secondary;
+    font-size: main-text-size();
+    margin: 0;
+    margin-top: auto;
+  }
+
+  .profile-comments-divider {
+    margin: {
+      bottom: 1rem;
+      top: 0.25rem;
+    }
+  }
+
+  .comments-section {
+    padding: 0 1rem;
+    border: none;
+    height: 15rem;
+
+    .simplebar-scrollbar::before {
+      background: $secondary !important;
+      width: 60% !important;
+      margin-right: 0 !important;
+    }
+  }
+}
